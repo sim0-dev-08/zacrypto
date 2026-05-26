@@ -1,250 +1,228 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Primary SEO -->
-<title>Cryptyos — Realtime DEX Crypto Data, Charts & Swap</title>
-<meta name="description" content="Cryptyos provides realtime DEX data across 10 blockchains — live OHLCV charts, token prices, trades, liquidity, cross-chain swap quotes and portfolio tracking. Free, no API key required.">
-<meta name="keywords" content="crypto DEX data, realtime cryptocurrency charts, token price, DeFi analytics, OHLCV chart, decentralized exchange, BSC, Ethereum, Solana, Polygon, Avalanche, Arbitrum, Base, cross-chain swap, crypto portfolio tracker, live crypto prices, DexScreener, GeckoTerminal, crypto investment, blockchain data API">
-<meta name="author" content="Cryptyos">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="theme-color" content="#0d1117">
-<link rel="canonical" href="https://cryptyos.eu.org/">
-<link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
-<link rel="apple-touch-icon" href="/static/favicon.svg">
-
-<!-- Open Graph (Facebook, LinkedIn, Discord, Telegram) -->
+<title>aCrypto — Live DEX Data, Charts & Swap</title>
+<meta name="description" content="aCrypto delivers realtime DEX data across 10 blockchains — live OHLCV charts, token prices, trades, liquidity, cross-chain swap quotes and portfolio tracking. Free, no API key required.">
+<meta name="keywords" content="crypto DEX data, realtime cryptocurrency charts, token price, DeFi analytics, OHLCV chart, decentralized exchange, BSC, Ethereum, Solana, Polygon, Avalanche, Arbitrum, Base, cross-chain swap, crypto portfolio tracker">
+<meta name="author" content="aCrypto">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080b14">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Cryptyos">
-<meta property="og:title" content="Cryptyos — Realtime DEX Crypto Data, Charts & Swap">
-<meta property="og:description" content="Live OHLCV charts, token prices, trades, liquidity and cross-chain swap quotes across Ethereum, BSC, Solana, Polygon and 6 more chains. Free, no signup.">
-<meta property="og:url" content="https://cryptyos.eu.org/">
-<meta property="og:image" content="https://cryptyos.eu.org/static/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Cryptyos — Realtime DEX Data Platform">
-<meta property="og:locale" content="en_US">
-
-<!-- Twitter / X Card -->
+<meta property="og:site_name" content="aCrypto">
+<meta property="og:title" content="aCrypto — Live DEX Data, Charts & Swap">
+<meta property="og:description" content="Live OHLCV charts, token prices, trades and cross-chain swap quotes across 10 blockchains. Free, no signup.">
+<meta property="og:image" content="/static/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@cryptyos">
-<meta name="twitter:creator" content="@cryptyos">
-<meta name="twitter:title" content="Cryptyos — Realtime DEX Crypto Data, Charts & Swap">
-<meta name="twitter:description" content="Live OHLCV charts, token prices, trades and cross-chain swap quotes across 10 blockchains. Free, no API key.">
-<meta name="twitter:image" content="https://cryptyos.eu.org/static/og-image.png">
-
-<!-- Schema.org Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://cryptyos.eu.org/#website",
-      "url": "https://cryptyos.eu.org/",
-      "name": "Cryptyos",
-      "description": "Realtime DEX crypto data platform — live charts, token prices, trades, swap quotes and portfolio tracking across 10 blockchains.",
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://cryptyos.eu.org/?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://cryptyos.eu.org/#organization",
-      "name": "Cryptyos",
-      "url": "https://cryptyos.eu.org/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cryptyos.eu.org/static/logo.png"
-      },
-      "sameAs": [
-        "https://twitter.com/cryptyos",
-        "https://t.me/cryptyos"
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://cryptyos.eu.org/#app",
-      "name": "Cryptyos",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": "https://cryptyos.eu.org/",
-      "description": "Realtime DEX data platform for crypto investors and traders. Live OHLCV charts, token analytics, cross-chain swap quotes and portfolio tracking across Ethereum, BSC, Solana, Polygon, Avalanche, Arbitrum, Base, Optimism, Fantom and Cronos.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "Realtime OHLCV candlestick charts",
-        "Live DEX trade feed",
-        "Token price and liquidity data",
-        "Cross-chain swap and bridge quotes",
-        "Crypto portfolio tracker",
-        "Token and pair search",
-        "10 blockchain networks supported"
-      ]
-    }
-  ]
-}
-</script>
-
+<meta name="twitter:title" content="aCrypto — Live DEX Data, Charts & Swap">
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--blue:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--purple:#bc8cff}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
-a{color:var(--blue);text-decoration:none}
-input,select{background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 12px;font-size:.9rem;outline:none;width:100%}
-input:focus,select:focus{border-color:var(--blue)}
-button{cursor:pointer;border:none;border-radius:6px;padding:8px 16px;font-size:.9rem;font-weight:600;transition:.15s}
-.btn-primary{background:var(--blue);color:#0d1117}
-.btn-primary:hover{opacity:.85}
+:root{
+  --bg:#080b14;--bg2:#0e1220;--bg3:#141928;--bg4:#1c2235;
+  --border:#1e2740;--border2:#2a3555;
+  --text:#e8eef8;--muted:#6b7a9e;--dim:#3d4f72;
+  --accent:#4f8eff;--accent2:#7b5fff;--green:#00d68f;--red:#ff4d6a;
+  --yellow:#ffb830;--cyan:#00c8e0;
+  --glow:0 0 24px #4f8eff33;
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+input,select{background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:9px 14px;font-size:.88rem;outline:none;width:100%;transition:.2s}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #4f8eff18}
+button{cursor:pointer;border:none;border-radius:8px;padding:9px 18px;font-size:.88rem;font-weight:600;transition:.18s}
+.btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 4px 16px #4f8eff30}
+.btn:hover{opacity:.88;transform:translateY(-1px)}
 .btn-ghost{background:var(--bg3);color:var(--text);border:1px solid var(--border)}
-.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
-.btn-green{background:var(--green);color:#0d1117}
-.btn-green:hover{opacity:.85}
-nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;gap:8px;height:56px;position:sticky;top:0;z-index:100}
-nav .logo{display:flex;align-items:center;gap:8px;margin-right:16px;text-decoration:none;color:var(--text)}
-nav .logo span{color:var(--green)}
-.nav-links{display:flex;gap:4px;flex:1}
-.nav-link{padding:6px 12px;border-radius:6px;font-size:.85rem;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.15s}
-.nav-link:hover,.nav-link.active{background:var(--bg3);color:var(--text)}
-.search-bar{display:flex;gap:8px;max-width:340px;width:100%}
-.search-bar input{padding:6px 12px;font-size:.85rem}
-main{flex:1;padding:24px;max-width:1400px;margin:0 auto;width:100%}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-green{background:linear-gradient(135deg,#00d68f,#00b87a);color:#080b14;font-weight:700}
+.btn-green:hover{opacity:.88;transform:translateY(-1px)}
+
+/* ── NAV ── */
+nav{background:rgba(8,11,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 28px;display:flex;align-items:center;gap:10px;height:60px;position:sticky;top:0;z-index:100}
+.nav-logo{display:flex;align-items:center;gap:10px;margin-right:20px;text-decoration:none;color:var(--text);flex-shrink:0}
+.nav-logo svg{flex-shrink:0}
+.logo-text{font-size:1.15rem;font-weight:800;letter-spacing:-.5px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-link{padding:7px 13px;border-radius:7px;font-size:.82rem;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.18s;font-weight:500}
+.nav-link:hover{color:var(--text);background:var(--bg3)}
+.nav-link.active{background:linear-gradient(135deg,#4f8eff18,#7b5fff18);color:var(--accent);border:1px solid #4f8eff30}
+.nav-search{display:flex;gap:8px;max-width:300px;width:100%}
+.nav-search input{padding:7px 12px;font-size:.82rem}
+
+/* ── TICKER ── */
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);padding:7px 0;overflow:hidden;white-space:nowrap;font-size:.78rem}
+.ticker-inner{display:inline-flex;gap:36px;animation:ticker 35s linear infinite}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:7px}
+.ticker-item .ti-name{color:var(--muted)}
+.ticker-item .ti-price{font-weight:600;font-family:monospace}
+
+/* ── LAYOUT ── */
+main{flex:1;padding:24px 28px;max-width:1440px;margin:0 auto;width:100%}
 .page{display:none}
 .page.active{display:block}
-.card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
-.stat-card .label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
-.stat-card .value{font-size:1.4rem;font-weight:700}
-.stat-card .change{font-size:.8rem;margin-top:4px}
+
+/* ── CARDS ── */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px}
+.card-sm{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.stat-card .sc-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.stat-card .sc-val{font-size:1.35rem;font-weight:800;font-family:monospace}
+.stat-card .sc-chg{font-size:.78rem;margin-top:5px}
 .up{color:var(--green)}.down{color:var(--red)}
-.section-title{font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--text)}
-.row{display:flex;gap:12px;align-items:flex-end;margin-bottom:16px;flex-wrap:wrap}
-.field{display:flex;flex-direction:column;gap:4px}
-.field label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-#chart-container{height:420px;border-radius:8px;overflow:hidden;background:var(--bg3);margin-bottom:16px}
-table{width:100%;border-collapse:collapse;font-size:.85rem}
-th{text-align:left;padding:10px 12px;color:var(--muted);font-weight:500;border-bottom:1px solid var(--border);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
-td{padding:10px 12px;border-bottom:1px solid var(--border)}
+
+/* ── SECTION HEADER ── */
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.sec-head h2{font-size:1rem;font-weight:700;color:var(--text)}
+.sec-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#4f8eff18,#7b5fff18);border:1px solid #4f8eff30;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+
+/* ── FORM ROW ── */
+.form-row{display:flex;gap:12px;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+
+/* ── CHART ── */
+#chart-container{height:440px;border-radius:10px;overflow:hidden;background:var(--bg3);margin-bottom:16px;border:1px solid var(--border)}
+.tf-row{display:flex;gap:6px;margin-bottom:14px}
+.tf-btn{padding:5px 12px;font-size:.78rem;background:var(--bg3);border:1px solid var(--border);color:var(--muted);border-radius:6px;cursor:pointer;transition:.15s}
+.tf-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tf-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* ── TABLE ── */
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+th{text-align:left;padding:11px 14px;color:var(--muted);font-weight:600;background:var(--bg3);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--border)}
+td{padding:11px 14px;border-bottom:1px solid var(--border)}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:var(--bg3)}
-.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.7rem;font-weight:600}
-.badge-buy{background:#1a3a2a;color:var(--green)}
-.badge-sell{background:#3a1a1a;color:var(--red)}
-.badge-chain{background:var(--bg3);color:var(--muted);border:1px solid var(--border)}
-.token-icon{width:28px;height:28px;border-radius:50%;background:var(--bg3);display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--blue);margin-right:8px;vertical-align:middle;border:1px solid var(--border)}
-.pair-row{display:flex;align-items:center}
-.loading{text-align:center;padding:40px;color:var(--muted);font-size:.9rem}
-.error-msg{background:#3a1a1a;border:1px solid var(--red);color:var(--red);padding:12px 16px;border-radius:8px;font-size:.85rem;margin-bottom:16px}
-.swap-card{max-width:480px;margin:0 auto}
-.swap-input-wrap{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:8px}
-.swap-input-wrap .top{display:flex;justify-content:space-between;margin-bottom:8px;font-size:.8rem;color:var(--muted)}
-.swap-input-wrap input{background:transparent;border:none;font-size:1.5rem;font-weight:700;padding:0;width:60%}
-.swap-input-wrap select{background:var(--bg2);border:1px solid var(--border);width:auto;font-weight:600}
-.swap-arrow{text-align:center;margin:4px 0;font-size:1.2rem;color:var(--muted);cursor:pointer;user-select:none}
-.swap-arrow:hover{color:var(--blue)}
-.quote-box{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;margin-top:16px;font-size:.85rem}
-.quote-row{display:flex;justify-content:space-between;padding:4px 0;color:var(--muted)}
-.quote-row span:last-child{color:var(--text);font-weight:500}
-.chains-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
-.chain-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:.15s}
-.chain-card:hover{border-color:var(--blue);background:var(--bg3)}
-.chain-card .chain-name{font-weight:600;margin-top:8px;font-size:.9rem}
-.chain-card .chain-id{font-size:.75rem;color:var(--muted);margin-top:2px}
-.chain-emoji{font-size:2rem}
-.ticker-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:8px 24px;overflow:hidden;white-space:nowrap;font-size:.8rem}
-.ticker-inner{display:inline-flex;gap:32px;animation:ticker 30s linear infinite}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.68rem;font-weight:700}
+.badge-buy{background:#00d68f18;color:var(--green);border:1px solid #00d68f30}
+.badge-sell{background:#ff4d6a18;color:var(--red);border:1px solid #ff4d6a30}
+.badge-chain{background:var(--bg4);color:var(--muted);border:1px solid var(--border)}
+
+/* ── TOKEN ICON ── */
+.tok-icon{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--bg4),var(--bg3));border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:var(--accent);flex-shrink:0}
+
+/* ── HOME GRID ── */
+.home-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.hc{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:18px;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.hc::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#4f8eff06,#7b5fff06);opacity:0;transition:.2s}
+.hc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 32px #0008}
+.hc:hover::after{opacity:1}
+.hc-rank{position:absolute;top:14px;right:14px;font-size:.68rem;color:var(--muted);font-weight:700;background:var(--bg4);border:1px solid var(--border);border-radius:20px;padding:2px 9px}
+.hc-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.hc-icon{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--bg4),var(--bg3));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:800;color:var(--accent);flex-shrink:0}
+.hc-name{font-weight:700;font-size:.92rem;line-height:1.2}
+.hc-sub{font-size:.7rem;color:var(--muted);margin-top:3px;display:flex;align-items:center;gap:6px}
+.hc-price{font-size:1.1rem;font-weight:800;font-family:monospace;margin-bottom:5px}
+.hc-chg{font-size:.95rem;font-weight:700;margin-bottom:12px}
+.hc-stats{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.73rem;margin-bottom:10px}
+.hc-stat{background:var(--bg3);border-radius:7px;padding:7px 9px;border:1px solid var(--border)}
+.hc-stat .hs-l{color:var(--muted);margin-bottom:2px;font-size:.67rem;text-transform:uppercase;letter-spacing:.05em}
+.hc-stat .hs-v{font-weight:700}
+
+/* ── HOME TABS ── */
+.home-tabs{display:flex;gap:4px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:4px}
+.ht{background:transparent;border:none;color:var(--muted);padding:7px 16px;border-radius:7px;font-size:.8rem;font-weight:500;cursor:pointer;transition:.18s}
+.ht.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:700}
+.ht:hover:not(.active){color:var(--text);background:var(--bg3)}
+
+/* ── STATS BAR ── */
+.stats-bar{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.sp{background:var(--bg2);border:1px solid var(--border);border-radius:9px;padding:10px 16px;min-width:120px}
+.sp-l{font-size:.67rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.sp-v{font-weight:700;font-size:.92rem}
+
+/* ── SWAP ── */
+.swap-wrap{max-width:500px;margin:0 auto}
+.swap-box{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:8px;transition:.2s}
+.swap-box:focus-within{border-color:var(--accent)}
+.swap-box-top{display:flex;justify-content:space-between;margin-bottom:10px;font-size:.75rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.swap-amount{background:transparent;border:none;font-size:1.6rem;font-weight:800;color:var(--text);width:60%;padding:0}
+.swap-amount:focus{outline:none}
+.swap-arrow{text-align:center;margin:4px 0;font-size:1.3rem;color:var(--dim);cursor:pointer;user-select:none;transition:.18s}
+.swap-arrow:hover{color:var(--accent);transform:rotate(180deg)}
+.quote-box{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:18px;margin-top:16px;font-size:.83rem}
+.qr{display:flex;justify-content:space-between;padding:5px 0;color:var(--muted);border-bottom:1px solid var(--border)}
+.qr:last-child{border-bottom:none}
+.qr span:last-child{color:var(--text);font-weight:600}
+
+/* ── CHAINS ── */
+.chains-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.chain-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:.2s}
+.chain-card:hover{border-color:var(--accent);background:var(--bg3);transform:translateY(-2px);box-shadow:var(--glow)}
+.chain-emoji{font-size:2.2rem;margin-bottom:8px}
+.chain-name{font-weight:700;font-size:.9rem}
+.chain-id{font-size:.72rem;color:var(--muted);margin-top:3px}
+
+/* ── TOKEN CARDS ── */
+.tok-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.tok-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;cursor:pointer;transition:.18s}
+.tok-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.tc-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.tc-name{font-weight:700;font-size:.92rem}
+.tc-sym{font-size:.72rem;color:var(--muted);margin-top:2px}
+.tc-price{font-size:1.05rem;font-weight:800;font-family:monospace;margin-bottom:5px}
+.tc-stats{display:flex;gap:12px;font-size:.75rem;color:var(--muted);flex-wrap:wrap}
+
+/* ── MISC ── */
+.loading{text-align:center;padding:48px;color:var(--muted);font-size:.88rem}
+.err{background:#ff4d6a12;border:1px solid #ff4d6a30;color:var(--red);padding:12px 16px;border-radius:9px;font-size:.83rem;margin-bottom:14px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.grid-4{grid-template-columns:1fr 1fr}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.home-token-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.htc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;cursor:pointer;transition:.15s;position:relative;overflow:hidden}
-.htc:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 24px #0006}
-.htc .htc-rank{position:absolute;top:12px;right:12px;font-size:.7rem;color:var(--muted);font-weight:700;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:2px 8px}
-.htc .htc-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.htc .htc-icon{width:36px;height:36px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:var(--blue);flex-shrink:0}
-.htc .htc-name{font-weight:700;font-size:.95rem;line-height:1.2}
-.htc .htc-sub{font-size:.72rem;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:6px}
-.htc .htc-price{font-size:1.15rem;font-weight:800;font-family:monospace;margin-bottom:6px}
-.htc .htc-change{font-size:1rem;font-weight:700;margin-bottom:10px}
-.htc .htc-stats{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.75rem;margin-bottom:10px}
-.htc .htc-stat{background:var(--bg3);border-radius:6px;padding:6px 8px}
-.htc .htc-stat .s-label{color:var(--muted);margin-bottom:2px}
-.htc .htc-stat .s-val{font-weight:600;color:var(--text)}
-.htc .htc-spark{margin-top:4px}
-.home-tab{background:transparent;border:none;color:var(--muted);padding:6px 14px;border-radius:6px;font-size:.82rem;font-weight:500;cursor:pointer;transition:.15s}
-.home-tab.active{background:var(--blue);color:#0d1117;font-weight:700}
-.home-tab:hover:not(.active){color:var(--text);background:var(--bg3)}
-.stats-pill{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 16px;font-size:.8rem;display:flex;flex-direction:column;gap:2px;min-width:120px}
-.stats-pill .sp-label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
-.stats-pill .sp-val{font-weight:700;font-size:.95rem}
-.ticker-item{display:inline-flex;align-items:center;gap:6px}
-.ticker-item .name{color:var(--muted)}
-.ticker-item .price{font-weight:600}
-.home-hero{text-align:center;padding:60px 20px 40px}
-.home-hero h1{font-size:2.5rem;font-weight:800;margin-bottom:12px}
-.home-hero h1 span{color:var(--blue)}
-.home-hero p{color:var(--muted);font-size:1.05rem;max-width:520px;margin:0 auto 28px}
-.home-hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:40px}
-.feature-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px}
-.feature-card .icon{font-size:1.8rem;margin-bottom:10px}
-.feature-card h3{font-size:.95rem;font-weight:600;margin-bottom:6px}
-.feature-card p{font-size:.82rem;color:var(--muted);line-height:1.5}
-.portfolio-header{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-.portfolio-header input{max-width:340px}
-.token-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.token-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
-.token-card .t-header{display:flex;align-items:center;margin-bottom:12px}
-.token-card .t-name{font-weight:600;font-size:.95rem}
-.token-card .t-symbol{font-size:.75rem;color:var(--muted);margin-top:1px}
-.token-card .t-price{font-size:1.1rem;font-weight:700;margin-bottom:4px}
-.token-card .t-stats{display:flex;gap:12px;font-size:.78rem;color:var(--muted)}
-.timeframe-btns{display:flex;gap:6px;margin-bottom:12px}
-.tf-btn{padding:4px 10px;font-size:.78rem;background:var(--bg3);border:1px solid var(--border);color:var(--muted);border-radius:4px;cursor:pointer}
-.tf-btn.active{background:var(--blue);color:#0d1117;border-color:var(--blue)}
-/* ── AD SLOT ── */
-/* placeholder for real ad network (Google AdSense / Carbon etc.) */
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 24px;margin-top:auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto 40px}
-.footer-brand .logo{font-size:1.2rem;font-weight:700;color:var(--blue);margin-bottom:10px}
-.footer-brand .logo span{color:var(--green)}
-.footer-brand p{font-size:.82rem;color:var(--muted);line-height:1.6;max-width:260px;margin-bottom:16px}
-.footer-brand .socials{display:flex;gap:10px}
-.social-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--bg3);border:1px solid var(--border);font-size:.9rem;text-decoration:none;transition:.15s}
-.social-btn:hover{border-color:var(--blue);background:var(--bg)}
-.footer-col h4{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
-.footer-col a{display:block;font-size:.83rem;color:var(--muted);margin-bottom:8px;text-decoration:none;transition:.15s}
-.footer-col a:hover{color:var(--text)}
-.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:12px;font-size:.78rem;color:var(--muted)}
-.footer-bottom .legal{display:flex;gap:20px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+
+/* ── FOOTER ── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 28px 28px;margin-top:auto}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.fb-logo{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.fb-desc{font-size:.8rem;color:var(--muted);line-height:1.7;max-width:260px;margin-bottom:16px}
+.socials{display:flex;gap:8px}
+.soc{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;background:var(--bg3);border:1px solid var(--border);font-size:.9rem;text-decoration:none;transition:.18s}
+.soc:hover{border-color:var(--accent);background:var(--bg4)}
+.fc h4{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:14px}
+.fc a{display:block;font-size:.8rem;color:var(--muted);margin-bottom:9px;text-decoration:none;transition:.15s}
+.fc a:hover{color:var(--text)}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.75rem;color:var(--muted)}
 .footer-bottom a{color:var(--muted);text-decoration:none}
 .footer-bottom a:hover{color:var(--text)}
-.badge-free{background:#1a3a2a;color:var(--green);border:1px solid #2a5a3a;padding:2px 8px;border-radius:20px;font-size:.7rem;font-weight:600;margin-left:6px}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column;text-align:center}}
+.badge-free{background:#00d68f18;color:var(--green);border:1px solid #00d68f30;padding:2px 8px;border-radius:20px;font-size:.67rem;font-weight:700;margin-left:5px}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr}.fb{grid-column:1/-1}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}}
+
+/* ── MODAL ── */
+#modal-overlay{display:none;position:fixed;inset:0;background:#000c;z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;max-width:580px;width:92%;max-height:82vh;overflow-y:auto;padding:32px;position:relative}
+.modal-close{position:absolute;top:18px;right:18px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);border-radius:7px;padding:4px 11px;cursor:pointer;font-size:.85rem}
+.modal-close:hover{color:var(--text)}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<!-- BEGIN AADS AD UNIT 2434924 -->
-<div id="aads-top" style="width:100%;background:#0d1117;position:sticky;top:0;z-index:101">
-  <iframe data-aa='2434924' src='//acceptable.a-ads.com/2434924/?size=Adaptive'
-    style='border:0;padding:0;width:70%;height:auto;overflow:hidden;display:block;margin:auto'></iframe>
-</div>
-<!-- END AADS AD UNIT 2434924 -->
 <nav>
-  <div class="logo"><img src="/static/logo.svg" alt="Cryptyos" style="height:32px;vertical-align:middle"> <span style="font-size:1.1rem;font-weight:800;letter-spacing:-.5px">Cryptyos</span></div>
+  <a class="nav-logo" href="#">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <rect width="32" height="32" rx="9" fill="url(#lg1)"/>
+      <text x="7" y="23" font-size="18" font-weight="900" font-family="monospace" fill="#fff">a</text>
+      <circle cx="24" cy="10" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+      <line x1="24" y1="6" x2="24" y2="14" stroke="#fff" stroke-width="1.5"/>
+      <line x1="20" y1="10" x2="28" y2="10" stroke="#fff" stroke-width="1.5"/>
+      <defs><linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#4f8eff"/><stop offset="1" stop-color="#7b5fff"/>
+      </linearGradient></defs>
+    </svg>
+    <span class="logo-text">aCrypto</span>
+  </a>
   <div class="nav-links">
     <div class="nav-link active" onclick="showPage('home',this)">Home</div>
     <div class="nav-link" onclick="showPage('chart',this)">Chart</div>
@@ -255,35 +233,29 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
     <div class="nav-link" onclick="showPage('portfolio',this)">Portfolio</div>
     <div class="nav-link" onclick="showPage('chains',this)">Chains</div>
   </div>
-  <div class="search-bar">
-    <input id="global-search" placeholder="Search token or pair…" onkeydown="if(event.key==='Enter')quickSearch()">
-    <button class="btn-primary" onclick="quickSearch()">Go</button>
+  <div class="nav-search">
+    <input id="global-search" placeholder="Search token…" onkeydown="if(event.key==='Enter')quickSearch()">
+    <button class="btn" onclick="quickSearch()">Go</button>
   </div>
 </nav>
 
-
 <!-- TICKER -->
-<div class="ticker-bar"><div class="ticker-inner" id="ticker">Loading market data…</div></div>
+<div class="ticker"><div class="ticker-inner" id="ticker">Loading…</div></div>
 
 <main>
 
 <!-- HOME -->
 <div class="page active" id="page-home">
-
-  <!-- Stats bar -->
-  <div id="home-stats-bar" style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap"></div>
-
-  <!-- Tabs -->
+  <div class="stats-bar" id="home-stats-bar"></div>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-    <div style="display:flex;gap:4px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:4px">
-      <button class="home-tab active" onclick="setHomeTab('gainers',this)">🚀 Top Gainers</button>
-      <button class="home-tab" onclick="setHomeTab('losers',this)">📉 Top Losers</button>
-      <button class="home-tab" onclick="setHomeTab('volume',this)">🔥 Top Volume</button>
-      <button class="home-tab" onclick="setHomeTab('trending',this)">⭐ Trending</button>
+    <div class="home-tabs">
+      <button class="ht active" onclick="setHomeTab('gainers',this)">🚀 Gainers</button>
+      <button class="ht" onclick="setHomeTab('losers',this)">📉 Losers</button>
+      <button class="ht" onclick="setHomeTab('volume',this)">🔥 Volume</button>
     </div>
-    <div style="display:flex;align-items:center;gap:8px">
-      <span id="home-live-dot" style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite"></span>
-      <span id="home-updated" style="font-size:.75rem;color:var(--muted)">Loading…</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="live-dot"></span>
+      <span id="home-updated" style="font-size:.73rem;color:var(--muted)">Loading…</span>
       <select id="home-chain-filter" style="width:130px;font-size:.8rem" onchange="loadHome()">
         <option value="">All Chains</option>
         <option value="ethereum">Ethereum</option>
@@ -295,16 +267,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
       </select>
     </div>
   </div>
-
-  <div id="home-grid" class="home-token-grid">
-    <div class="loading" style="grid-column:1/-1;padding:60px">Loading top gainers…</div>
-  </div>
+  <div id="home-grid" class="home-grid"><div class="loading" style="grid-column:1/-1">Loading…</div></div>
 </div>
 
 <!-- CHART -->
 <div class="page" id="page-chart">
-  <div class="section-title">📈 OHLCV Chart</div>
-  <div class="row">
+  <div class="sec-head"><div class="sec-icon">📈</div><h2>OHLCV Chart</h2></div>
+  <div class="form-row">
     <div class="field"><label>Chain</label>
       <select id="chart-chain" style="width:140px">
         <option value="ethereum">Ethereum</option><option value="bsc" selected>BSC</option>
@@ -314,7 +283,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
         <option value="base">Base</option><option value="solana">Solana</option>
       </select>
     </div>
-    <div class="field" style="flex:1;min-width:260px"><label>Pool Address or Ticker (e.g. BTCUSDT)</label>
+    <div class="field" style="flex:1;min-width:240px"><label>Pool Address or Ticker</label>
       <input id="chart-pool" placeholder="0x… or BTCUSDT" value="BTCUSDT">
     </div>
     <div class="field"><label>Timeframe</label>
@@ -322,26 +291,24 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
         <option value="minute">Minute</option><option value="hour" selected>Hour</option><option value="day">Day</option>
       </select>
     </div>
-    <div class="field"><label>Limit</label>
-      <input id="chart-limit" type="number" value="100" style="width:80px">
-    </div>
-    <button class="btn-primary" onclick="loadChart()">Load</button>
+    <div class="field"><label>Limit</label><input id="chart-limit" type="number" value="100" style="width:80px"></div>
+    <button class="btn" onclick="loadChart()">Load</button>
   </div>
-  <div class="timeframe-btns">
+  <div class="tf-row">
     <button class="tf-btn active" onclick="setTF('minute',this)">1m</button>
     <button class="tf-btn" onclick="setTF('hour',this)">1h</button>
     <button class="tf-btn" onclick="setTF('day',this)">1d</button>
   </div>
   <div id="chart-container"></div>
-  <div id="chart-stats" class="grid-4" style="gap:12px"></div>
-  <div id="chart-source" style="margin-top:8px;font-size:.75rem;color:var(--muted)"></div>
+  <div id="chart-stats" class="grid-4" style="gap:12px;margin-bottom:12px"></div>
+  <div id="chart-source" style="font-size:.72rem;color:var(--muted)"></div>
   <div id="chart-error"></div>
 </div>
 
 <!-- TRADES -->
 <div class="page" id="page-trades">
-  <div class="section-title">⚡ Recent Trades</div>
-  <div class="row">
+  <div class="sec-head"><div class="sec-icon">⚡</div><h2>Recent Trades</h2></div>
+  <div class="form-row">
     <div class="field"><label>Chain</label>
       <select id="trades-chain" style="width:140px">
         <option value="ethereum">Ethereum</option><option value="bsc" selected>BSC</option>
@@ -351,25 +318,23 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
         <option value="base">Base</option><option value="solana">Solana</option>
       </select>
     </div>
-    <div class="field" style="flex:1;min-width:260px"><label>Pool Address</label>
+    <div class="field" style="flex:1;min-width:240px"><label>Pool Address</label>
       <input id="trades-pool" placeholder="0x…" value="0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE">
     </div>
-    <button class="btn-primary" onclick="loadTrades()">Load</button>
-    <button class="btn-ghost" onclick="startAutoRefresh()">🔄 Auto-refresh</button>
+    <button class="btn" onclick="loadTrades()">Load</button>
+    <button class="btn-ghost" onclick="toggleAutoRefresh()">🔄 Auto</button>
   </div>
   <div id="trades-error"></div>
-  <div class="card" style="overflow-x:auto">
-    <table id="trades-table">
-      <thead><tr><th>Type</th><th>Price USD</th><th>Amount 0</th><th>Amount 1</th><th>Volume USD</th><th>Time</th><th>Tx</th></tr></thead>
-      <tbody id="trades-body"><tr><td colspan="7" class="loading">Enter a pool address and click Load</td></tr></tbody>
-    </table>
+  <div class="table-wrap">
+    <table><thead><tr><th>Type</th><th>Price USD</th><th>Amount 0</th><th>Amount 1</th><th>Volume USD</th><th>Time</th><th>Tx</th></tr></thead>
+    <tbody id="trades-body"><tr><td colspan="7" class="loading">Enter a pool and click Load</td></tr></tbody></table>
   </div>
 </div>
 
 <!-- TOKEN -->
 <div class="page" id="page-token">
-  <div class="section-title">🪙 Token Info</div>
-  <div class="row">
+  <div class="sec-head"><div class="sec-icon">🪙</div><h2>Token Info</h2></div>
+  <div class="form-row">
     <div class="field"><label>Chain</label>
       <select id="token-chain" style="width:140px">
         <option value="ethereum">Ethereum</option><option value="bsc" selected>BSC</option>
@@ -379,54 +344,50 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
         <option value="base">Base</option><option value="solana">Solana</option>
       </select>
     </div>
-    <div class="field" style="flex:1;min-width:260px"><label>Token Address</label>
+    <div class="field" style="flex:1;min-width:240px"><label>Token Address</label>
       <input id="token-addr" placeholder="0x…">
     </div>
-    <button class="btn-primary" onclick="loadToken()">Load</button>
+    <button class="btn" onclick="loadToken()">Load</button>
   </div>
   <div id="token-error"></div>
-  <div id="token-stats" class="grid-4" style="gap:12px;margin-bottom:16px"></div>
+  <div id="token-stats" class="grid-4" style="gap:12px;margin-bottom:18px"></div>
   <div id="token-pairs"></div>
 </div>
 
 <!-- SEARCH -->
 <div class="page" id="page-search">
-  <div class="section-title">🔍 Search Tokens & Pairs</div>
-  <div class="row">
-    <div class="field" style="flex:1"><label>Query</label>
-      <input id="search-q" placeholder="Token name, symbol or address…" onkeydown="if(event.key==='Enter')doSearch()">
+  <div class="sec-head"><div class="sec-icon">🔍</div><h2>Search</h2></div>
+  <div class="form-row">
+    <div class="field" style="flex:1"><label>Token name, symbol or address</label>
+      <input id="search-q" placeholder="e.g. PEPE, WETH, 0x…" onkeydown="if(event.key==='Enter')doSearch()">
     </div>
-    <button class="btn-primary" onclick="doSearch()">Search</button>
+    <button class="btn" onclick="doSearch()">Search</button>
   </div>
   <div id="search-error"></div>
-  <div id="search-results" class="token-list"></div>
+  <div id="search-results" class="tok-grid"></div>
 </div>
 
 <!-- SWAP -->
 <div class="page" id="page-swap">
-  <div class="section-title">🔄 Swap / Bridge</div>
-  <div class="swap-card">
-    <div class="swap-input-wrap">
-      <div class="top"><span>From</span><span id="from-chain-label">Chain ID</span></div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <input id="swap-from-amount" type="number" placeholder="0.0" style="font-size:1.5rem;font-weight:700;background:transparent;border:none;width:60%">
-        <input id="swap-from-token" placeholder="Token address" style="font-size:.8rem">
-      </div>
-      <div style="margin-top:8px;display:flex;gap:8px">
-        <div class="field" style="flex:1"><label>From Chain ID</label><input id="swap-from-chain" type="number" placeholder="56" value="56"></div>
+  <div class="sec-head"><div class="sec-icon">🔄</div><h2>Swap / Bridge</h2></div>
+  <div class="swap-wrap">
+    <div class="swap-box">
+      <div class="swap-box-top"><span>From</span></div>
+      <input class="swap-amount" id="swap-from-amount" type="number" placeholder="0.0">
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <div class="field" style="flex:1"><label>Chain ID</label><input id="swap-from-chain" type="number" placeholder="56" value="56"></div>
+        <div class="field" style="flex:2"><label>Token Address</label><input id="swap-from-token" placeholder="0x…"></div>
       </div>
     </div>
-    <div class="swap-arrow" onclick="swapDirection()">⇅</div>
-    <div class="swap-input-wrap">
-      <div class="top"><span>To</span></div>
-      <input id="swap-to-token" placeholder="To token address" style="font-size:.85rem;background:transparent;border:none;width:100%">
-      <div style="margin-top:8px">
-        <div class="field"><label>To Chain ID</label><input id="swap-to-chain" type="number" placeholder="1" value="1"></div>
+    <div class="swap-arrow" onclick="swapDir()">⇅</div>
+    <div class="swap-box">
+      <div class="swap-box-top"><span>To</span></div>
+      <div style="display:flex;gap:10px;margin-top:6px">
+        <div class="field" style="flex:1"><label>Chain ID</label><input id="swap-to-chain" type="number" placeholder="1" value="1"></div>
+        <div class="field" style="flex:2"><label>Token Address</label><input id="swap-to-token" placeholder="0x…"></div>
       </div>
     </div>
-    <div style="margin-top:8px">
-      <div class="field"><label>Your Wallet Address</label><input id="swap-wallet" placeholder="0x…"></div>
-    </div>
+    <div class="field" style="margin-top:10px"><label>Your Wallet Address</label><input id="swap-wallet" placeholder="0x…"></div>
     <button class="btn-green" style="width:100%;margin-top:16px;padding:14px;font-size:1rem" onclick="getQuote()">Get Quote</button>
     <div id="swap-error"></div>
     <div id="quote-result"></div>
@@ -435,8 +396,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 
 <!-- PORTFOLIO -->
 <div class="page" id="page-portfolio">
-  <div class="section-title">💼 Portfolio</div>
-  <div class="portfolio-header">
+  <div class="sec-head"><div class="sec-icon">💼</div><h2>Portfolio</h2></div>
+  <div class="form-row">
     <div class="field"><label>Chain</label>
       <select id="port-chain" style="width:140px">
         <option value="ethereum">Ethereum</option><option value="bsc" selected>BSC</option>
@@ -446,648 +407,273 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
         <option value="base">Base</option><option value="solana">Solana</option>
       </select>
     </div>
-    <div class="field" style="flex:1;min-width:260px"><label>Wallet Address</label>
+    <div class="field" style="flex:1;min-width:240px"><label>Wallet Address</label>
       <input id="port-wallet" placeholder="0x…">
     </div>
-    <button class="btn-primary" onclick="loadPortfolio()">Load</button>
+    <button class="btn" onclick="loadPortfolio()">Load</button>
   </div>
   <div id="port-error"></div>
-  <div id="port-results" class="token-list"></div>
+  <div id="port-results" class="tok-grid"></div>
 </div>
 
 <!-- CHAINS -->
 <div class="page" id="page-chains">
-  <div class="section-title">⛓️ Supported Chains</div>
+  <div class="sec-head"><div class="sec-icon">⛓️</div><h2>Supported Chains</h2></div>
   <div id="chains-grid" class="chains-grid"></div>
 </div>
 
 </main>
 
-
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo"><img src="/static/logo.svg" alt="Cryptyos" style="height:32px;vertical-align:middle"> <span style="font-size:1.1rem;font-weight:800;letter-spacing:-.5px">Cryptyos</span></div>
-      <p>Professional-grade realtime DEX data platform. Live charts, trades, token analytics, cross-chain swaps and portfolio tracking — all free, no API keys required.</p>
-      <div class="socials">
-        <a class="social-btn" href="#" title="Twitter/X">𝕏</a>
-        <a class="social-btn" href="#" title="Telegram">✈</a>
-        <a class="social-btn" href="#" title="Discord">💬</a>
-        <a class="social-btn" href="#" title="GitHub">⌥</a>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="fb">
+        <div class="fb-logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="9" fill="url(#lg2)"/><text x="7" y="23" font-size="18" font-weight="900" font-family="monospace" fill="#fff">a</text><circle cx="24" cy="10" r="5" fill="none" stroke="#fff" stroke-width="2"/><line x1="24" y1="6" x2="24" y2="14" stroke="#fff" stroke-width="1.5"/><line x1="20" y1="10" x2="28" y2="10" stroke="#fff" stroke-width="1.5"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8eff"/><stop offset="1" stop-color="#7b5fff"/></linearGradient></defs></svg>
+          <span class="logo-text">aCrypto</span>
+        </div>
+        <p class="fb-desc">Professional-grade realtime DEX data. Live charts, trades, token analytics, cross-chain swaps and portfolio tracking — free, no API keys.</p>
+        <div class="socials">
+          <a class="soc" href="#" title="Twitter/X">𝕏</a>
+          <a class="soc" href="#" title="Telegram">✈</a>
+          <a class="soc" href="#" title="Discord">💬</a>
+          <a class="soc" href="#" title="GitHub">⌥</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Platform</h4>
+        <a href="#" onclick="showPage('chart',null);return false">📈 Live Chart</a>
+        <a href="#" onclick="showPage('trades',null);return false">⚡ Trades</a>
+        <a href="#" onclick="showPage('token',null);return false">🪙 Token Info</a>
+        <a href="#" onclick="showPage('search',null);return false">🔍 Search</a>
+        <a href="#" onclick="showPage('swap',null);return false">🔄 Swap</a>
+        <a href="#" onclick="showPage('portfolio',null);return false">💼 Portfolio</a>
+      </div>
+      <div class="fc">
+        <h4>Data Sources</h4>
+        <a href="https://www.geckoterminal.com/dex-api" target="_blank">GeckoTerminal <span class="badge-free">FREE</span></a>
+        <a href="https://docs.dexscreener.com" target="_blank">DexScreener <span class="badge-free">FREE</span></a>
+        <a href="https://li.quest" target="_blank">LiFi Aggregator <span class="badge-free">FREE</span></a>
+      </div>
+      <div class="fc">
+        <h4>Legal</h4>
+        <a href="#" onclick="showModal('disclaimer');return false">Disclaimer</a>
+        <a href="#" onclick="showModal('privacy');return false">Privacy Policy</a>
+        <a href="#" onclick="showModal('terms');return false">Terms of Use</a>
+        <a href="/docs" target="_blank">API Docs</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Platform</h4>
-      <a href="#" onclick="showPage('chart',null);return false">📈 Live Chart</a>
-      <a href="#" onclick="showPage('trades',null);return false">⚡ Trades</a>
-      <a href="#" onclick="showPage('token',null);return false">🪙 Token Info</a>
-      <a href="#" onclick="showPage('search',null);return false">🔍 Search</a>
-      <a href="#" onclick="showPage('swap',null);return false">🔄 Swap / Bridge</a>
-      <a href="#" onclick="showPage('portfolio',null);return false">💼 Portfolio</a>
+    <div class="footer-bottom">
+      <span>© 2026 aCrypto. All rights reserved.</span>
+      <span>Not financial advice. Data via GeckoTerminal, DexScreener &amp; LiFi.</span>
     </div>
-    <div class="footer-col">
-      <h4>Data Sources</h4>
-      <a href="https://www.geckoterminal.com/dex-api" target="_blank" rel="noopener">GeckoTerminal <span class="badge-free">FREE</span></a>
-      <a href="https://docs.dexscreener.com" target="_blank" rel="noopener">DexScreener <span class="badge-free">FREE</span></a>
-      <a href="https://li.quest" target="_blank" rel="noopener">LiFi Aggregator <span class="badge-free">FREE</span></a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="#" onclick="showModal('disclaimer');return false">Disclaimer</a>
-      <a href="#" onclick="showModal('privacy');return false">Privacy Policy</a>
-      <a href="#" onclick="showModal('terms');return false">Terms of Use</a>
-      <a href="/docs" target="_blank">API Docs</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Cryptyos. All rights reserved.</span>
-    <div class="legal">
-      <a href="#" onclick="showModal('disclaimer');return false">Disclaimer</a>
-      <a href="#" onclick="showModal('privacy');return false">Privacy</a>
-      <a href="#" onclick="showModal('terms');return false">Terms</a>
-    </div>
-    <span>Not financial advice. Data via GeckoTerminal, DexScreener & LiFi.</span>
   </div>
 </footer>
 
-<!-- MODALS -->
-<div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:#000a;z-index:200;align-items:center;justify-content:center">
-  <div onclick="event.stopPropagation()" style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;max-width:560px;width:90%;max-height:80vh;overflow-y:auto;padding:28px;position:relative">
-    <button onclick="closeModal()" style="position:absolute;top:16px;right:16px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer">✕</button>
+<!-- MODAL -->
+<div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:#000c;z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
     <div id="modal-content"></div>
   </div>
 </div>
 
+
 <script>
-const API = '';  // same origin
-let chartInstance = null, chartSeries = null, autoRefreshTimer = null;
+const API='';
+let chartInstance=null,_autoRefresh=false,_autoTimer=null,_homeTab='gainers';
+const CHAIN_META={ethereum:{name:'Ethereum',emoji:'⟠',id:1},bsc:{name:'BNB Chain',emoji:'🟡',id:56},polygon:{name:'Polygon',emoji:'🟣',id:137},avalanche:{name:'Avalanche',emoji:'🔺',id:43114},fantom:{name:'Fantom',emoji:'👻',id:250},arbitrum:{name:'Arbitrum',emoji:'🔵',id:42161},cronos:{name:'Cronos',emoji:'🐾',id:25},optimism:{name:'Optimism',emoji:'🔴',id:10},base:{name:'Base',emoji:'🔷',id:8453},solana:{name:'Solana',emoji:'◎',id:1399811149}};
 
-const CHAIN_META = {
-  ethereum:{name:'Ethereum',emoji:'⟠',id:1},
-  bsc:{name:'BNB Chain',emoji:'🟡',id:56},
-  polygon:{name:'Polygon',emoji:'🟣',id:137},
-  avalanche:{name:'Avalanche',emoji:'🔺',id:43114},
-  fantom:{name:'Fantom',emoji:'👻',id:250},
-  arbitrum:{name:'Arbitrum',emoji:'🔵',id:42161},
-  cronos:{name:'Cronos',emoji:'🐾',id:25},
-  optimism:{name:'Optimism',emoji:'🔴',id:10},
-  base:{name:'Base',emoji:'🔷',id:8453},
-  solana:{name:'Solana',emoji:'◎',id:1399811149}
-};
-
-function showPage(id, el) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  if (el) el.classList.add('active');
-  else {
-    document.querySelectorAll('.nav-link').forEach(l => {
-      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes("'"+id+"'")) l.classList.add('active');
-    });
-  }
-  if (id === 'chains') renderChains();
-  // Reload A-ADS iframe on every page visit
-  const f = document.querySelector('#aads-top iframe');
-  if (f) { const s = f.src.split('?')[0]; f.src = ''; f.src = s + '?size=Adaptive&t=' + Date.now(); }
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  if(el)el.classList.add('active');
+  else document.querySelectorAll('.nav-link').forEach(l=>{if((l.getAttribute('onclick')||'').includes("'"+id+"'"))l.classList.add('active')});
+  if(id==='chains')renderChains();
 }
+function fmt(n){if(n==null)return'—';n=parseFloat(n);if(isNaN(n))return'—';if(Math.abs(n)>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(Math.abs(n)>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(Math.abs(n)>=1e3)return'$'+(n/1e3).toFixed(2)+'K';if(Math.abs(n)<0.0001)return'$'+n.toExponential(3);return'$'+n.toFixed(n<1?6:2)}
+function fmtN(n){if(n==null)return'—';n=parseFloat(n);if(isNaN(n))return'—';if(Math.abs(n)>=1e9)return(n/1e9).toFixed(2)+'B';if(Math.abs(n)>=1e6)return(n/1e6).toFixed(2)+'M';if(Math.abs(n)>=1e3)return(n/1e3).toFixed(2)+'K';return n.toFixed(4)}
+function fmtT(ts){if(!ts)return'—';return new Date(typeof ts==='number'&&ts<1e12?ts*1000:ts).toLocaleTimeString()}
+function pct(v){if(v==null)return'';const n=parseFloat(v);return`<span class="${n>=0?'up':'down'}">${n>=0?'+':''}${n.toFixed(2)}%</span>`}
+function sc(label,val,chg){return`<div class="stat-card"><div class="sc-label">${label}</div><div class="sc-val">${val}</div>${chg?`<div class="sc-chg">${chg}</div>`:''}</div>`}
+function showErr(id,msg){document.getElementById(id).innerHTML=`<div class="err">⚠️ ${msg}</div>`}
+function clearErr(id){document.getElementById(id).innerHTML=''}
 
-function fmt(n) {
-  if (n == null) return '—';
-  n = parseFloat(n);
-  if (isNaN(n)) return '—';
-  if (Math.abs(n) >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
-  if (Math.abs(n) >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
-  if (Math.abs(n) >= 1e3) return '$' + (n/1e3).toFixed(2) + 'K';
-  if (Math.abs(n) < 0.0001) return '$' + n.toExponential(3);
-  return '$' + n.toFixed(n < 1 ? 6 : 2);
-}
-function fmtNum(n) {
-  if (n == null) return '—';
-  n = parseFloat(n);
-  if (isNaN(n)) return '—';
-  if (Math.abs(n) >= 1e9) return (n/1e9).toFixed(2) + 'B';
-  if (Math.abs(n) >= 1e6) return (n/1e6).toFixed(2) + 'M';
-  if (Math.abs(n) >= 1e3) return (n/1e3).toFixed(2) + 'K';
-  return n.toFixed(4);
-}
-function fmtTime(ts) {
-  if (!ts) return '—';
-  const d = new Date(typeof ts === 'number' && ts < 1e12 ? ts * 1000 : ts);
-  return d.toLocaleTimeString();
-}
-function pct(v) {
-  if (v == null) return '';
-  const n = parseFloat(v);
-  const cls = n >= 0 ? 'up' : 'down';
-  return `<span class="${cls}">${n >= 0 ? '+' : ''}${n.toFixed(2)}%</span>`;
-}
-function statCard(label, value, change) {
-  return `<div class="stat-card"><div class="label">${label}</div><div class="value">${value}</div>${change ? `<div class="change">${change}</div>` : ''}</div>`;
-}
-function showError(id, msg) {
-  document.getElementById(id).innerHTML = `<div class="error-msg">⚠️ ${msg}</div>`;
-}
-function clearError(id) { document.getElementById(id).innerHTML = ''; }
-
-// ── CHART ──────────────────────────────────────────────────────────────────
-async function loadChart() {
-  clearError('chart-error');
-  const chain = document.getElementById('chart-chain').value;
-  const pool = document.getElementById('chart-pool').value.trim();
-  const tf = document.getElementById('chart-tf').value;
-  const limit = document.getElementById('chart-limit').value || 100;
-  if (!pool) return showError('chart-error', 'Enter a pool address');
-
-  document.getElementById('chart-container').innerHTML = '<div class="loading">Loading chart…</div>';
-  document.getElementById('chart-stats').innerHTML = '';
-
-  try {
-    const r = await fetch(`${API}/chart/${chain}/${pool}?timeframe=${tf}&limit=${limit}`);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const data = await r.json();
-    const ohlcv = data?.data?.attributes?.ohlcv_list || [];
-    if (!ohlcv.length) throw new Error('No OHLCV data returned for this pool');
-
-    const candles = ohlcv.map(c => ({
-      time: c[0],
-      open: parseFloat(c[1]),
-      high: parseFloat(c[2]),
-      low: parseFloat(c[3]),
-      close: parseFloat(c[4]),
-      value: parseFloat(c[5])
-    })).sort((a,b) => a.time - b.time);
-
-    const container = document.getElementById('chart-container');
-    container.innerHTML = '';
-    if (chartInstance) { chartInstance.remove(); chartInstance = null; }
-
-    chartInstance = LightweightCharts.createChart(container, {
-      layout: { background: { color: '#21262d' }, textColor: '#e6edf3' },
-      grid: { vertLines: { color: '#30363d' }, horzLines: { color: '#30363d' } },
-      crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
-      rightPriceScale: { borderColor: '#30363d' },
-      timeScale: { borderColor: '#30363d', timeVisible: true },
-      width: container.clientWidth,
-      height: 420
-    });
-
-    chartSeries = chartInstance.addCandlestickSeries({
-      upColor: '#3fb950', downColor: '#f85149',
-      borderUpColor: '#3fb950', borderDownColor: '#f85149',
-      wickUpColor: '#3fb950', wickDownColor: '#f85149'
-    });
-    chartSeries.setData(candles);
-
-    const volSeries = chartInstance.addHistogramSeries({
-      color: '#58a6ff', priceFormat: { type: 'volume' },
-      priceScaleId: 'vol', scaleMargins: { top: 0.8, bottom: 0 }
-    });
-    volSeries.setData(candles.map(c => ({ time: c.time, value: c.value, color: c.close >= c.open ? '#3fb95055' : '#f8514955' })));
-
+async function loadChart(){
+  clearErr('chart-error');
+  const chain=document.getElementById('chart-chain').value,pool=document.getElementById('chart-pool').value.trim(),tf=document.getElementById('chart-tf').value,limit=document.getElementById('chart-limit').value||100;
+  if(!pool)return showErr('chart-error','Enter a pool address');
+  document.getElementById('chart-container').innerHTML='<div class="loading">Loading chart…</div>';
+  document.getElementById('chart-stats').innerHTML='';
+  try{
+    const r=await fetch(`${API}/chart/${chain}/${pool}?timeframe=${tf}&limit=${limit}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const data=await r.json(),ohlcv=data?.data?.attributes?.ohlcv_list||[];
+    if(!ohlcv.length)throw new Error('No OHLCV data returned');
+    const candles=ohlcv.map(c=>({time:c[0],open:+c[1],high:+c[2],low:+c[3],close:+c[4],value:+c[5]})).sort((a,b)=>a.time-b.time);
+    const el=document.getElementById('chart-container');el.innerHTML='';
+    if(chartInstance){chartInstance.remove();chartInstance=null;}
+    chartInstance=LightweightCharts.createChart(el,{layout:{background:{color:'#141928'},textColor:'#e8eef8'},grid:{vertLines:{color:'#1e2740'},horzLines:{color:'#1e2740'}},rightPriceScale:{borderColor:'#1e2740'},timeScale:{borderColor:'#1e2740',timeVisible:true},width:el.clientWidth,height:440});
+    const cs=chartInstance.addCandlestickSeries({upColor:'#00d68f',downColor:'#ff4d6a',borderUpColor:'#00d68f',borderDownColor:'#ff4d6a',wickUpColor:'#00d68f',wickDownColor:'#ff4d6a'});
+    cs.setData(candles);
+    const vs=chartInstance.addHistogramSeries({color:'#4f8eff',priceFormat:{type:'volume'},priceScaleId:'vol',scaleMargins:{top:0.8,bottom:0}});
+    vs.setData(candles.map(c=>({time:c.time,value:c.value,color:c.close>=c.open?'#00d68f44':'#ff4d6a44'})));
     chartInstance.timeScale().fitContent();
-    window.addEventListener('resize', () => chartInstance && chartInstance.applyOptions({ width: container.clientWidth }));
-
-    const last = candles[candles.length - 1];
-    const first = candles[0];
-    const chg = ((last.close - first.open) / first.open * 100).toFixed(2);
-    document.getElementById('chart-stats').innerHTML =
-      statCard('Price', fmt(last.close), pct(chg)) +
-      statCard('Open', fmt(last.open)) +
-      statCard('High', fmt(last.high)) +
-      statCard('Low', fmt(last.low));
-
-    const srcLabels = {binance:'📊 Binance (unlimited)', geckoterminal:'🦎 GeckoTerminal (cached 5min)', dexscreener_synthetic:'⚠️ DexScreener synthetic (GeckoTerminal rate-limited)'};
-    document.getElementById('chart-source').innerHTML = `Data source: <strong>${srcLabels[data.source] || data.source || 'unknown'}</strong>`;
-  } catch(e) {
-    document.getElementById('chart-container').innerHTML = '';
-    showError('chart-error', e.message);
-  }
+    window.addEventListener('resize',()=>chartInstance&&chartInstance.applyOptions({width:el.clientWidth}));
+    const last=candles[candles.length-1],first=candles[0],chg=((last.close-first.open)/first.open*100).toFixed(2);
+    document.getElementById('chart-stats').innerHTML=sc('Price',fmt(last.close),pct(chg))+sc('Open',fmt(last.open))+sc('High',fmt(last.high))+sc('Low',fmt(last.low));
+    document.getElementById('chart-source').textContent='Source: '+(data.source||'unknown');
+  }catch(e){document.getElementById('chart-container').innerHTML='';showErr('chart-error',e.message)}
 }
+function setTF(tf,btn){document.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('chart-tf').value=tf;loadChart()}
 
-function setTF(tf, btn) {
-  document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('chart-tf').value = tf;
-  loadChart();
-}
-
-// ── TRADES ─────────────────────────────────────────────────────────────────
-async function loadTrades() {
-  clearError('trades-error');
-  const chain = document.getElementById('trades-chain').value;
-  const pool = document.getElementById('trades-pool').value.trim();
-  if (!pool) return showError('trades-error', 'Enter a pool address');
-  document.getElementById('trades-body').innerHTML = '<tr><td colspan="7" class="loading">Loading…</td></tr>';
-  try {
-    const r = await fetch(`${API}/trades/${chain}/${pool}`);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const data = await r.json();
-    const trades = data?.data || [];
-    if (!trades.length) { document.getElementById('trades-body').innerHTML = '<tr><td colspan="7" class="loading">No trades found</td></tr>'; return; }
-    document.getElementById('trades-body').innerHTML = trades.slice(0, 50).map(t => {
-      const a = t.attributes || {};
-      const isBuy = a.kind === 'buy';
-      const txHash = a.tx_hash || '';
-      const shortTx = txHash ? txHash.slice(0,8)+'…' : '—';
-      return `<tr>
-        <td><span class="badge ${isBuy ? 'badge-buy' : 'badge-sell'}">${isBuy ? '▲ BUY' : '▼ SELL'}</span></td>
-        <td>${fmt(a.price_from_in_usd || a.price_to_in_usd)}</td>
-        <td>${fmtNum(a.from_token_amount)}</td>
-        <td>${fmtNum(a.to_token_amount)}</td>
-        <td>${fmt(a.volume_in_usd)}</td>
-        <td>${fmtTime(a.block_timestamp)}</td>
-        <td>${txHash ? `<a href="#" title="${txHash}">${shortTx}</a>` : '—'}</td>
-      </tr>`;
+async function loadTrades(){
+  clearErr('trades-error');
+  const chain=document.getElementById('trades-chain').value,pool=document.getElementById('trades-pool').value.trim();
+  if(!pool)return showErr('trades-error','Enter a pool address');
+  document.getElementById('trades-body').innerHTML='<tr><td colspan="7" class="loading">Loading…</td></tr>';
+  try{
+    const r=await fetch(`${API}/trades/${chain}/${pool}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const trades=(await r.json())?.data||[];
+    if(!trades.length){document.getElementById('trades-body').innerHTML='<tr><td colspan="7" class="loading">No trades found</td></tr>';return}
+    document.getElementById('trades-body').innerHTML=trades.slice(0,50).map(t=>{
+      const a=t.attributes||{},buy=a.kind==='buy',tx=a.tx_hash||'';
+      return`<tr><td><span class="badge ${buy?'badge-buy':'badge-sell'}">${buy?'▲ BUY':'▼ SELL'}</span></td><td>${fmt(a.price_from_in_usd||a.price_to_in_usd)}</td><td>${fmtN(a.from_token_amount)}</td><td>${fmtN(a.to_token_amount)}</td><td>${fmt(a.volume_in_usd)}</td><td>${fmtT(a.block_timestamp)}</td><td>${tx?`<a href="#" title="${tx}">${tx.slice(0,8)}…</a>`:'—'}</td></tr>`;
     }).join('');
-  } catch(e) { showError('trades-error', e.message); }
+  }catch(e){showErr('trades-error',e.message)}
+}
+function toggleAutoRefresh(){_autoRefresh=!_autoRefresh;if(_autoRefresh){loadTrades();_autoTimer=setInterval(loadTrades,5000)}else clearInterval(_autoTimer)}
+
+async function loadToken(){
+  clearErr('token-error');
+  const chain=document.getElementById('token-chain').value,addr=document.getElementById('token-addr').value.trim();
+  if(!addr)return showErr('token-error','Enter a token address');
+  document.getElementById('token-stats').innerHTML='<div class="loading">Loading…</div>';
+  document.getElementById('token-pairs').innerHTML='';
+  try{
+    const r=await fetch(`${API}/token/${chain}/${addr}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const data=await r.json(),pairs=Array.isArray(data)?data:(data?.pairs||[]);
+    if(!pairs.length)throw new Error('No data found');
+    const p=pairs[0];
+    document.getElementById('token-stats').innerHTML=sc('Price USD',fmt(p.priceUsd),pct(p.priceChange?.h24))+sc('24h Volume',fmt(p.volume?.h24))+sc('Liquidity',fmt(p.liquidity?.usd))+sc('Market Cap',fmt(p.marketCap||p.fdv));
+    document.getElementById('token-pairs').innerHTML=`<div style="font-size:.85rem;font-weight:700;margin:18px 0 10px">Trading Pairs (${pairs.length})</div><div class="table-wrap"><table><thead><tr><th>Pair</th><th>DEX</th><th>Chain</th><th>Price</th><th>24h Vol</th><th>Liquidity</th><th>1h</th><th>24h</th></tr></thead><tbody>${pairs.map(p=>`<tr><td><div style="display:flex;align-items:center;gap:8px"><span class="tok-icon">${(p.baseToken?.symbol||'?')[0]}</span><div><div style="font-weight:600">${p.baseToken?.symbol||'?'}/${p.quoteToken?.symbol||'?'}</div><div style="font-size:.7rem;color:var(--muted)">${(p.pairAddress||'').slice(0,10)}…</div></div></div></td><td>${p.dexId||'—'}</td><td><span class="badge badge-chain">${p.chainId||'—'}</span></td><td>${fmt(p.priceUsd)}</td><td>${fmt(p.volume?.h24)}</td><td>${fmt(p.liquidity?.usd)}</td><td>${pct(p.priceChange?.h1)||'—'}</td><td>${pct(p.priceChange?.h24)||'—'}</td></tr>`).join('')}</tbody></table></div>`;
+  }catch(e){document.getElementById('token-stats').innerHTML='';showErr('token-error',e.message)}
 }
 
-let _autoRefresh = false;
-function startAutoRefresh() {
-  _autoRefresh = !_autoRefresh;
-  if (_autoRefresh) {
-    loadTrades();
-    autoRefreshTimer = setInterval(loadTrades, 5000);
-  } else {
-    clearInterval(autoRefreshTimer);
-  }
+async function doSearch(){
+  clearErr('search-error');
+  const q=document.getElementById('search-q').value.trim();
+  if(q.length<2)return showErr('search-error','Enter at least 2 characters');
+  document.getElementById('search-results').innerHTML='<div class="loading">Searching…</div>';
+  try{
+    const r=await fetch(`${API}/search?q=${encodeURIComponent(q)}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const pairs=(await r.json())?.pairs||[];
+    if(!pairs.length){document.getElementById('search-results').innerHTML='<div class="loading">No results</div>';return}
+    document.getElementById('search-results').innerHTML=pairs.slice(0,24).map(p=>`<div class="tok-card" onclick="openToken('${p.chainId}','${p.baseToken?.address}')"><div class="tc-head"><span class="tok-icon">${(p.baseToken?.symbol||'?')[0]}</span><div><div class="tc-name">${p.baseToken?.name||'Unknown'}</div><div class="tc-sym">${p.baseToken?.symbol||'?'} / ${p.quoteToken?.symbol||'?'}</div></div></div><div class="tc-price">${fmt(p.priceUsd)} ${pct(p.priceChange?.h24)}</div><div class="tc-stats"><span>Vol ${fmt(p.volume?.h24)}</span><span>Liq ${fmt(p.liquidity?.usd)}</span><span class="badge badge-chain">${p.chainId||'?'}</span></div></div>`).join('');
+  }catch(e){document.getElementById('search-results').innerHTML='';showErr('search-error',e.message)}
+}
+function openToken(chain,addr){document.getElementById('token-chain').value=chain;document.getElementById('token-addr').value=addr;showPage('token',null);loadToken()}
+function quickSearch(){const q=document.getElementById('global-search').value.trim();if(!q)return;document.getElementById('search-q').value=q;showPage('search',null);doSearch()}
+
+async function getQuote(){
+  clearErr('swap-error');document.getElementById('quote-result').innerHTML='';
+  const fc=document.getElementById('swap-from-chain').value,tc=document.getElementById('swap-to-chain').value,ft=document.getElementById('swap-from-token').value.trim(),tt=document.getElementById('swap-to-token').value.trim(),amt=document.getElementById('swap-from-amount').value,w=document.getElementById('swap-wallet').value.trim();
+  if(!fc||!tc||!ft||!tt||!amt||!w)return showErr('swap-error','Fill all fields');
+  const amtWei=BigInt(Math.floor(parseFloat(amt)*1e18)).toString();
+  document.getElementById('quote-result').innerHTML='<div class="loading">Fetching quote…</div>';
+  try{
+    const r=await fetch(`${API}/swap/quote?from_chain=${fc}&to_chain=${tc}&from_token=${ft}&to_token=${tt}&from_amount=${amtWei}&from_address=${w}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const q=await r.json(),est=q.estimate||{},tool=q.toolDetails||{};
+    document.getElementById('quote-result').innerHTML=`<div class="quote-box"><div style="font-weight:700;margin-bottom:12px">Quote via ${tool.name||q.tool||'LiFi'}</div><div class="qr"><span>From</span><span>${fmtN(est.fromAmount/1e18)} tokens</span></div><div class="qr"><span>To</span><span>${fmtN(est.toAmount/1e18)} tokens</span></div><div class="qr"><span>Min received</span><span>${fmtN(est.toAmountMin/1e18)}</span></div><div class="qr"><span>Gas cost</span><span>${fmt(est.gasCosts?.[0]?.amountUSD)}</span></div><div class="qr"><span>Duration</span><span>${est.executionDuration||'—'}s</span></div><div class="qr"><span>Route</span><span>${(q.includedSteps||[]).map(s=>s.toolDetails?.name||s.tool).join(' → ')||'—'}</span></div></div>`;
+  }catch(e){document.getElementById('quote-result').innerHTML='';showErr('swap-error',e.message)}
+}
+function swapDir(){const fc=document.getElementById('swap-from-chain'),tc=document.getElementById('swap-to-chain'),ft=document.getElementById('swap-from-token'),tt=document.getElementById('swap-to-token');[fc.value,tc.value]=[tc.value,fc.value];[ft.value,tt.value]=[tt.value,ft.value]}
+
+async function loadPortfolio(){
+  clearErr('port-error');
+  const chain=document.getElementById('port-chain').value,wallet=document.getElementById('port-wallet').value.trim();
+  if(!wallet)return showErr('port-error','Enter a wallet address');
+  document.getElementById('port-results').innerHTML='<div class="loading">Loading…</div>';
+  try{
+    const r=await fetch(`${API}/portfolio/${chain}/${wallet}`);
+    if(!r.ok)throw new Error((await r.json()).detail||r.statusText);
+    const data=await r.json(),pairs=Array.isArray(data)?data:(data?.pairs||[]);
+    if(!pairs.length){document.getElementById('port-results').innerHTML='<div class="loading">No data found</div>';return}
+    document.getElementById('port-results').innerHTML=pairs.slice(0,24).map(p=>`<div class="tok-card"><div class="tc-head"><span class="tok-icon">${(p.baseToken?.symbol||'?')[0]}</span><div><div class="tc-name">${p.baseToken?.name||'Unknown'}</div><div class="tc-sym">${p.baseToken?.symbol||'?'} / ${p.quoteToken?.symbol||'?'}</div></div></div><div class="tc-price">${fmt(p.priceUsd)} ${pct(p.priceChange?.h24)}</div><div class="tc-stats"><span>Vol ${fmt(p.volume?.h24)}</span><span>Liq ${fmt(p.liquidity?.usd)}</span><span class="badge badge-chain">${p.chainId||'?'}</span></div></div>`).join('');
+  }catch(e){document.getElementById('port-results').innerHTML='';showErr('port-error',e.message)}
 }
 
-// ── TOKEN ──────────────────────────────────────────────────────────────────
-async function loadToken() {
-  clearError('token-error');
-  const chain = document.getElementById('token-chain').value;
-  const addr = document.getElementById('token-addr').value.trim();
-  if (!addr) return showError('token-error', 'Enter a token address');
-  document.getElementById('token-stats').innerHTML = '<div class="loading">Loading…</div>';
-  document.getElementById('token-pairs').innerHTML = '';
-  try {
-    const r = await fetch(`${API}/token/${chain}/${addr}`);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const data = await r.json();
-    // v1 returns array directly; legacy returns {pairs:[...]}
-    const pairs = Array.isArray(data) ? data : (data?.pairs || []);
-    if (!pairs.length) throw new Error('No data found for this token');
-    const p = pairs[0];
-    const base = p.baseToken || {};
-    const stats = p;
-    document.getElementById('token-stats').innerHTML =
-      statCard('Price USD', fmt(stats.priceUsd), pct(stats.priceChange?.h24)) +
-      statCard('24h Volume', fmt(stats.volume?.h24)) +
-      statCard('Liquidity', fmt(stats.liquidity?.usd)) +
-      statCard('Market Cap', fmt(stats.marketCap || stats.fdv));
+function renderChains(){document.getElementById('chains-grid').innerHTML=Object.entries(CHAIN_META).map(([k,c])=>`<div class="chain-card" onclick="document.getElementById('chart-chain').value='${k}';showPage('chart',null);loadChart()"><div class="chain-emoji">${c.emoji}</div><div class="chain-name">${c.name}</div><div class="chain-id">Chain ID: ${c.id}</div></div>`).join('')}
 
-    document.getElementById('token-pairs').innerHTML = `
-      <div class="section-title" style="margin-top:20px">Trading Pairs (${pairs.length})</div>
-      <div style="overflow-x:auto"><table>
-        <thead><tr><th>Pair</th><th>DEX</th><th>Chain</th><th>Price</th><th>24h Vol</th><th>Liquidity</th><th>5m</th><th>1h</th><th>24h</th></tr></thead>
-        <tbody>${pairs.map(pair => `<tr>
-          <td><div class="pair-row">
-            <span class="token-icon">${(pair.baseToken?.symbol||'?')[0]}</span>
-            <div><div style="font-weight:600">${pair.baseToken?.symbol||'?'}/${pair.quoteToken?.symbol||'?'}</div>
-            <div style="font-size:.72rem;color:var(--muted)">${(pair.pairAddress||'').slice(0,10)}…</div></div>
-          </div></td>
-          <td>${pair.dexId||'—'}</td>
-          <td><span class="badge badge-chain">${pair.chainId||'—'}</span></td>
-          <td>${fmt(pair.priceUsd)}</td>
-          <td>${fmt(pair.volume?.h24)}</td>
-          <td>${fmt(pair.liquidity?.usd)}</td>
-          <td>${pct(pair.priceChange?.m5)||'—'}</td>
-          <td>${pct(pair.priceChange?.h1)||'—'}</td>
-          <td>${pct(pair.priceChange?.h24)||'—'}</td>
-        </tr>`).join('')}</tbody>
-      </table></div>`;
-  } catch(e) { document.getElementById('token-stats').innerHTML = ''; showError('token-error', e.message); }
+async function loadTicker(){
+  try{const r=await fetch(`${API}/trending`);if(!r.ok)return;const items=await r.json();if(!Array.isArray(items)||!items.length)return;const html=items.slice(0,12).map(t=>`<span class="ticker-item"><span class="ti-name">${t.name||'?'}</span><span class="ti-price">${fmt(t.marketCap)}</span><span class="${(t.marketCapChange?.h24||0)>=0?'up':'down'}">${(t.marketCapChange?.h24||0)>=0?'▲':'▼'}${Math.abs(t.marketCapChange?.h24||0).toFixed(1)}%</span></span>`).join('');document.getElementById('ticker').innerHTML=html+html;
+  }catch(e){}
 }
 
-// ── SEARCH ─────────────────────────────────────────────────────────────────
-async function doSearch() {
-  clearError('search-error');
-  const q = document.getElementById('search-q').value.trim();
-  if (q.length < 2) return showError('search-error', 'Enter at least 2 characters');
-  document.getElementById('search-results').innerHTML = '<div class="loading">Searching…</div>';
-  try {
-    const r = await fetch(`${API}/search?q=${encodeURIComponent(q)}`);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const data = await r.json();
-    const pairs = data?.pairs || [];
-    if (!pairs.length) { document.getElementById('search-results').innerHTML = '<div class="loading">No results found</div>'; return; }
-    document.getElementById('search-results').innerHTML = pairs.slice(0,24).map(p => `
-      <div class="token-card" onclick="openToken('${p.chainId}','${p.baseToken?.address}')">
-        <div class="t-header">
-          <span class="token-icon">${(p.baseToken?.symbol||'?')[0]}</span>
-          <div><div class="t-name">${p.baseToken?.name||'Unknown'}</div>
-          <div class="t-symbol">${p.baseToken?.symbol||'?'} / ${p.quoteToken?.symbol||'?'}</div></div>
+function sparkSVG(chg){
+  const up=chg>=0,s=Math.abs(chg)%10,c=up?'#00d68f':'#ff4d6a';
+  const pts=up?[[0,32],[20,26-s*.4],[40,20+s*.3],[60,15-s*.5],[80,10+s*.2],[100,5]]:[[0,5],[20,10+s*.3],[40,16-s*.2],[60,22+s*.4],[80,27-s*.2],[100,32]];
+  const line=pts.map(([x,y],i)=>`${i?'L':'M'}${x},${y}`).join(' ');
+  const gid='sg'+Math.round(Math.random()*9999);
+  return`<svg width="100%" height="36" viewBox="0 0 100 36" fill="none" preserveAspectRatio="none"><defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${c}" stop-opacity=".3"/><stop offset="100%" stop-color="${c}" stop-opacity="0"/></linearGradient></defs><path d="${line} L100,36 L0,36 Z" fill="url(#${gid})"/><path d="${line}" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+function setHomeTab(tab,btn){_homeTab=tab;document.querySelectorAll('.ht').forEach(b=>b.classList.remove('active'));btn.classList.add('active');loadHome()}
+async function loadHome(){
+  const cf=document.getElementById('home-chain-filter').value,grid=document.getElementById('home-grid');
+  grid.innerHTML='<div class="loading" style="grid-column:1/-1">Loading…</div>';
+  try{
+    const qs=cf?[cf==='solana'?'SOL':cf==='bsc'?'BNB':'USDT']:['USDT','USDC','WETH','WBNB'];
+    const res=await Promise.allSettled(qs.map(q=>fetch(`${API}/search?q=${encodeURIComponent(q)}`).then(r=>r.json())));
+    const seen=new Set();let pairs=[];
+    for(const r of res)if(r.status==='fulfilled')for(const p of(r.value?.pairs||[]))if(!seen.has(p.pairAddress)&&p.priceUsd&&p.priceChange?.h24!=null){seen.add(p.pairAddress);pairs.push(p)}
+    if(cf)pairs=pairs.filter(p=>p.chainId===cf);
+    if(_homeTab==='gainers')pairs.sort((a,b)=>(b.priceChange?.h24||0)-(a.priceChange?.h24||0));
+    else if(_homeTab==='losers')pairs.sort((a,b)=>(a.priceChange?.h24||0)-(b.priceChange?.h24||0));
+    else pairs.sort((a,b)=>(b.volume?.h24||0)-(a.volume?.h24||0));
+    const top=pairs.slice(0,20);
+    if(!top.length){grid.innerHTML='<div class="loading" style="grid-column:1/-1">No data</div>';return}
+    const tv=pairs.reduce((s,p)=>s+(p.volume?.h24||0),0),ac=pairs.slice(0,20).reduce((s,p)=>s+(p.priceChange?.h24||0),0)/Math.min(20,pairs.length);
+    document.getElementById('home-stats-bar').innerHTML=`<div class="sp"><div class="sp-l">Pairs</div><div class="sp-v">${pairs.length}</div></div><div class="sp"><div class="sp-l">24h Volume</div><div class="sp-v">${fmt(tv)}</div></div><div class="sp"><div class="sp-l">Avg Change</div><div class="sp-v ${ac>=0?'up':'down'}">${ac>=0?'+':''}${ac.toFixed(2)}%</div></div>`;
+    document.getElementById('home-updated').textContent='Updated '+new Date().toLocaleTimeString();
+    grid.innerHTML=top.map((p,i)=>{
+      const chg=p.priceChange?.h24||0,up=chg>=0,sym=p.baseToken?.symbol||'?',img=p.info?.imageUrl;
+      return`<div class="hc" onclick="openToken('${p.chainId}','${p.baseToken?.address}')">
+        <div class="hc-rank">#${i+1}</div>
+        <div class="hc-head">
+          ${img?`<img src="${img}" style="width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0" onerror="this.outerHTML='<div class=hc-icon>${sym[0]}</div>'">`:`<div class="hc-icon">${sym[0]}</div>`}
+          <div><div class="hc-name">${sym}<span style="color:var(--muted);font-weight:400">/${p.quoteToken?.symbol||'?'}</span></div>
+          <div class="hc-sub"><span style="background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px">${p.chainId}</span><span>${p.dexId||''}</span></div></div>
         </div>
-        <div class="t-price">${fmt(p.priceUsd)} ${pct(p.priceChange?.h24)}</div>
-        <div class="t-stats">
-          <span>Vol ${fmt(p.volume?.h24)}</span>
-          <span>Liq ${fmt(p.liquidity?.usd)}</span>
-          <span class="badge badge-chain">${p.chainId||'?'}</span>
+        <div class="hc-price">${fmt(p.priceUsd)}</div>
+        <div class="hc-chg ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</div>
+        <div class="hc-stats">
+          <div class="hc-stat"><div class="hs-l">24h Vol</div><div class="hs-v">${fmt(p.volume?.h24)}</div></div>
+          <div class="hc-stat"><div class="hs-l">Liquidity</div><div class="hs-v">${fmt(p.liquidity?.usd)}</div></div>
+          <div class="hc-stat"><div class="hs-l">Mkt Cap</div><div class="hs-v">${fmt(p.marketCap||p.fdv)}</div></div>
+          <div class="hc-stat"><div class="hs-l">1h</div><div class="hs-v ${(p.priceChange?.h1||0)>=0?'up':'down'}">${(p.priceChange?.h1||0)>=0?'+':''}${(p.priceChange?.h1||0).toFixed(2)}%</div></div>
         </div>
-      </div>`).join('');
-  } catch(e) { document.getElementById('search-results').innerHTML = ''; showError('search-error', e.message); }
-}
-
-function openToken(chain, addr) {
-  document.getElementById('token-chain').value = chain;
-  document.getElementById('token-addr').value = addr;
-  showPage('token', null);
-  loadToken();
-}
-
-function quickSearch() {
-  const q = document.getElementById('global-search').value.trim();
-  if (!q) return;
-  document.getElementById('search-q').value = q;
-  showPage('search', null);
-  doSearch();
-}
-
-// ── SWAP ───────────────────────────────────────────────────────────────────
-async function getQuote() {
-  clearError('swap-error');
-  document.getElementById('quote-result').innerHTML = '';
-  const fromChain = document.getElementById('swap-from-chain').value;
-  const toChain = document.getElementById('swap-to-chain').value;
-  const fromToken = document.getElementById('swap-from-token').value.trim();
-  const toToken = document.getElementById('swap-to-token').value.trim();
-  const amount = document.getElementById('swap-from-amount').value;
-  const wallet = document.getElementById('swap-wallet').value.trim();
-  if (!fromChain || !toChain || !fromToken || !toToken || !amount || !wallet)
-    return showError('swap-error', 'Fill all fields');
-  const amountWei = BigInt(Math.floor(parseFloat(amount) * 1e18)).toString();
-  document.getElementById('quote-result').innerHTML = '<div class="loading">Fetching quote…</div>';
-  try {
-    const url = `${API}/swap/quote?from_chain=${fromChain}&to_chain=${toChain}&from_token=${fromToken}&to_token=${toToken}&from_amount=${amountWei}&from_address=${wallet}`;
-    const r = await fetch(url);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const q = await r.json();
-    const est = q.estimate || {};
-    const tool = q.toolDetails || {};
-    document.getElementById('quote-result').innerHTML = `
-      <div class="quote-box">
-        <div style="font-weight:600;margin-bottom:12px">Quote via ${tool.name || q.tool || 'LiFi'}</div>
-        <div class="quote-row"><span>From Amount</span><span>${fmtNum(est.fromAmount / 1e18)} tokens</span></div>
-        <div class="quote-row"><span>To Amount</span><span>${fmtNum(est.toAmount / 1e18)} tokens</span></div>
-        <div class="quote-row"><span>To Amount (min)</span><span>${fmtNum(est.toAmountMin / 1e18)}</span></div>
-        <div class="quote-row"><span>Execution Time</span><span>${est.executionDuration || '—'}s</span></div>
-        <div class="quote-row"><span>Gas Cost</span><span>${fmt(est.gasCosts?.[0]?.amountUSD)}</span></div>
-        <div class="quote-row"><span>Fee Cost</span><span>${fmt(est.feeCosts?.[0]?.amountUSD)}</span></div>
-        <div class="quote-row"><span>Route</span><span>${(q.includedSteps||[]).map(s=>s.toolDetails?.name||s.tool).join(' → ') || '—'}</span></div>
-      </div>`;
-  } catch(e) { document.getElementById('quote-result').innerHTML = ''; showError('swap-error', e.message); }
-}
-
-function swapDirection() {
-  const fc = document.getElementById('swap-from-chain');
-  const tc = document.getElementById('swap-to-chain');
-  const ft = document.getElementById('swap-from-token');
-  const tt = document.getElementById('swap-to-token');
-  [fc.value, tc.value] = [tc.value, fc.value];
-  [ft.value, tt.value] = [tt.value, ft.value];
-}
-
-// ── PORTFOLIO ──────────────────────────────────────────────────────────────
-async function loadPortfolio() {
-  clearError('port-error');
-  const chain = document.getElementById('port-chain').value;
-  const wallet = document.getElementById('port-wallet').value.trim();
-  if (!wallet) return showError('port-error', 'Enter a wallet address');
-  document.getElementById('port-results').innerHTML = '<div class="loading">Loading…</div>';
-  try {
-    const r = await fetch(`${API}/portfolio/${chain}/${wallet}`);
-    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
-    const data = await r.json();
-    const pairs = Array.isArray(data) ? data : (data?.pairs || []);
-    if (!pairs.length) { document.getElementById('port-results').innerHTML = '<div class="loading">No token data found for this address</div>'; return; }
-    document.getElementById('port-results').innerHTML = pairs.slice(0,24).map(p => `
-      <div class="token-card">
-        <div class="t-header">
-          <span class="token-icon">${(p.baseToken?.symbol||'?')[0]}</span>
-          <div><div class="t-name">${p.baseToken?.name||'Unknown'}</div>
-          <div class="t-symbol">${p.baseToken?.symbol||'?'} / ${p.quoteToken?.symbol||'?'}</div></div>
-        </div>
-        <div class="t-price">${fmt(p.priceUsd)} ${pct(p.priceChange?.h24)}</div>
-        <div class="t-stats">
-          <span>Vol ${fmt(p.volume?.h24)}</span>
-          <span>Liq ${fmt(p.liquidity?.usd)}</span>
-          <span class="badge badge-chain">${p.chainId||'?'}</span>
-        </div>
-      </div>`).join('');
-  } catch(e) { document.getElementById('port-results').innerHTML = ''; showError('port-error', e.message); }
-}
-
-// ── CHAINS ─────────────────────────────────────────────────────────────────
-function renderChains() {
-  document.getElementById('chains-grid').innerHTML = Object.entries(CHAIN_META).map(([key, c]) => `
-    <div class="chain-card" onclick="document.getElementById('chart-chain').value='${key}';showPage('chart',null);loadChart()">
-      <div class="chain-emoji">${c.emoji}</div>
-      <div class="chain-name">${c.name}</div>
-      <div class="chain-id">Chain ID: ${c.id}</div>
-    </div>`).join('');
-}
-
-// ── TICKER ─────────────────────────────────────────────────────────────────
-async function loadTicker() {
-  try {
-    const r = await fetch(`${API}/trending`);
-    if (!r.ok) return;
-    const data = await r.json();
-    const items_raw = Array.isArray(data) ? data : [];
-    if (!items_raw.length) return;
-    const items = items_raw.slice(0, 12).map(t =>
-      `<span class="ticker-item"><span class="name">${t.name||'?'}</span><span class="price">${fmt(t.marketCap)}</span><span class="${(t.marketCapChange?.h24||0)>=0?'up':'down'}">${(t.marketCapChange?.h24||0)>=0?'▲':'▼'}${Math.abs(t.marketCapChange?.h24||0).toFixed(1)}%</span></span>`
-    ).join('');
-    document.getElementById('ticker').innerHTML = items + items;
-  } catch(e) {}
-}
-
-// ── HOME ───────────────────────────────────────────────────────────────────
-let _homeTab = 'gainers';
-let _homeTimer = null;
-
-// Sparkline SVG from price change (matches crypto-analytics Sparkline.tsx logic)
-function sparklineSVG(change24h) {
-  const up = change24h >= 0;
-  const seed = Math.abs(change24h) % 10;
-  const pts = up
-    ? [[0,32],[16,28-seed*.4],[32,22+seed*.3],[48,18-seed*.5],[64,14+seed*.2],[80,10-seed*.3],[100,6]]
-    : [[0,6],[16,10+seed*.3],[32,14-seed*.2],[48,20+seed*.4],[64,24-seed*.3],[80,28+seed*.2],[100,32]];
-  const line = pts.map(([x,y],i) => `${i===0?'M':'L'}${x},${y}`).join(' ');
-  const area = `${line} L100,38 L0,38 Z`;
-  const color = up ? '#3fb950' : '#f85149';
-  const gid = `hsg${up?'u':'d'}${Math.round(seed)}`;
-  return `<svg width="100%" height="38" viewBox="0 0 100 38" fill="none" preserveAspectRatio="none">
-    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
-    </linearGradient></defs>
-    <path d="${area}" fill="url(#${gid})"/>
-    <path d="${line}" stroke="${color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>`;
-}
-
-function setHomeTab(tab, btn) {
-  _homeTab = tab;
-  document.querySelectorAll('.home-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  loadHome();
-}
-
-async function loadHome() {
-  const chainFilter = document.getElementById('home-chain-filter').value;
-  const grid = document.getElementById('home-grid');
-  grid.innerHTML = '<div class="loading" style="grid-column:1/-1;padding:60px">Loading…</div>';
-
-  try {
-    // Fetch broad pairs from DexScreener via our /search endpoint
-    const queries = chainFilter
-      ? [chainFilter === 'solana' ? 'SOL' : chainFilter === 'bsc' ? 'BNB' : 'USDT']
-      : ['USDT','USDC','WETH','WBNB'];
-
-    const results = await Promise.allSettled(queries.map(q => fetch(`${API}/search?q=${encodeURIComponent(q)}`).then(r=>r.json())));
-    const seen = new Set();
-    let pairs = [];
-    for (const r of results) {
-      if (r.status === 'fulfilled') {
-        for (const p of (r.value?.pairs || [])) {
-          if (!seen.has(p.pairAddress) && p.priceUsd && p.priceChange?.h24 != null) {
-            seen.add(p.pairAddress);
-            pairs.push(p);
-          }
-        }
-      }
-    }
-
-    // Also fetch trending boosted tokens from DexScreener
-    if (_homeTab === 'trending') {
-      const tr = await fetch(`${API}/trending`).then(r=>r.json()).catch(()=>[]);
-      // trending metas don't have pair data, use pairs sorted by volume as proxy
-      _homeTab = 'volume'; // fallback to volume for trending display
-    }
-
-    // Filter by chain
-    if (chainFilter) pairs = pairs.filter(p => p.chainId === chainFilter);
-
-    // Sort by tab
-    if (_homeTab === 'gainers')  pairs.sort((a,b) => (b.priceChange?.h24||0) - (a.priceChange?.h24||0));
-    if (_homeTab === 'losers')   pairs.sort((a,b) => (a.priceChange?.h24||0) - (b.priceChange?.h24||0));
-    if (_homeTab === 'volume')   pairs.sort((a,b) => (b.volume?.h24||0) - (a.volume?.h24||0));
-    if (_homeTab === 'trending') pairs.sort((a,b) => (b.volume?.h24||0) - (a.volume?.h24||0));
-
-    const top = pairs.slice(0, 20);
-    if (!top.length) { grid.innerHTML = '<div class="loading" style="grid-column:1/-1">No data found</div>'; return; }
-
-    // Stats bar
-    const totalVol = pairs.reduce((s,p) => s + (p.volume?.h24||0), 0);
-    const avgChg = pairs.slice(0,20).reduce((s,p) => s + (p.priceChange?.h24||0), 0) / Math.min(20, pairs.length);
-    document.getElementById('home-stats-bar').innerHTML = `
-      <div class="stats-pill"><div class="sp-label">Pairs loaded</div><div class="sp-val">${pairs.length}</div></div>
-      <div class="stats-pill"><div class="sp-label">Total 24h Vol</div><div class="sp-val">${fmt(totalVol)}</div></div>
-      <div class="stats-pill"><div class="sp-label">Avg 24h Change</div><div class="sp-val ${avgChg>=0?'up':'down'}">${avgChg>=0?'+':''}${avgChg.toFixed(2)}%</div></div>
-    `;
-
-    document.getElementById('home-updated').textContent = 'Updated ' + new Date().toLocaleTimeString();
-
-    grid.innerHTML = top.map((p, i) => {
-      const chg = p.priceChange?.h24 || 0;
-      const up = chg >= 0;
-      const sym = p.baseToken?.symbol || '?';
-      const icon = p.info?.imageUrl;
-      const iconHtml = icon
-        ? `<img src="${icon}" style="width:36px;height:36px;border-radius:50%;object-fit:cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
-        : '';
-      const fallback = `<div class="htc-icon" style="${icon?'display:none':'display:flex'}">${sym[0]}</div>`;
-
-      return `<div class="htc" onclick="openToken('${p.chainId}','${p.baseToken?.address}')">
-        <div class="htc-rank">#${i+1}</div>
-        <div class="htc-header">
-          <div style="position:relative;flex-shrink:0">${iconHtml}${fallback}</div>
-          <div>
-            <div class="htc-name">${sym}<span style="color:var(--muted);font-weight:400">/${p.quoteToken?.symbol||'?'}</span></div>
-            <div class="htc-sub">
-              <span style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1px 6px">${p.chainId}</span>
-              <span>${p.dexId||''}</span>
-            </div>
-          </div>
-        </div>
-        <div class="htc-price">${fmt(p.priceUsd)}</div>
-        <div class="htc-change ${up?'up':'down'}" style="font-size:1.1rem">${up?'▲':'▼'} ${Math.abs(chg).toFixed(2)}%</div>
-        <div class="htc-stats">
-          <div class="htc-stat"><div class="s-label">24h Volume</div><div class="s-val">${fmt(p.volume?.h24)}</div></div>
-          <div class="htc-stat"><div class="s-label">Liquidity</div><div class="s-val">${fmt(p.liquidity?.usd)}</div></div>
-          <div class="htc-stat"><div class="s-label">Mkt Cap</div><div class="s-val">${fmt(p.marketCap||p.fdv)}</div></div>
-          <div class="htc-stat"><div class="s-label">1h Change</div><div class="s-val ${(p.priceChange?.h1||0)>=0?'up':'down'}">${(p.priceChange?.h1||0)>=0?'+':''}${(p.priceChange?.h1||0).toFixed(2)}%</div></div>
-        </div>
-        <div class="htc-spark">${sparklineSVG(chg)}</div>
+        <div>${sparkSVG(chg)}</div>
       </div>`;
     }).join('');
-
-  } catch(e) {
-    grid.innerHTML = `<div class="error-msg" style="grid-column:1/-1">⚠️ ${e.message}</div>`;
-  }
+  }catch(e){grid.innerHTML=`<div class="err" style="grid-column:1/-1">⚠️ ${e.message}</div>`}
 }
 
-// ── MODALS ─────────────────────────────────────────────────────────────────
-const MODAL_CONTENT = {
-  disclaimer: `<h2 style="margin-bottom:16px;color:var(--yellow)">⚠️ Disclaimer</h2>
-    <p style="color:var(--muted);line-height:1.7;font-size:.88rem">
-    Cryptyos is a data aggregation platform for informational purposes only. Nothing on this platform constitutes financial, investment, legal or tax advice.<br><br>
-    Cryptocurrency markets are highly volatile. Past performance is not indicative of future results. You should conduct your own research and consult a qualified financial advisor before making any investment decisions.<br><br>
-    Cryptyos does not hold, custody, or transmit any digital assets. Swap quotes are provided by third-party aggregators (LiFi) and Cryptyos is not responsible for any losses arising from swap transactions.<br><br>
-    Market data is sourced from GeckoTerminal and DexScreener and may be delayed or inaccurate. Cryptyos makes no warranties regarding data accuracy or completeness.
-    </p>`,
-  privacy: `<h2 style="margin-bottom:16px;color:var(--blue)">🔒 Privacy Policy</h2>
-    <p style="color:var(--muted);line-height:1.7;font-size:.88rem">
-    <strong style="color:var(--text)">Data We Collect</strong><br>
-    Cryptyos does not collect, store or sell personal data. We do not require account registration or login.<br><br>
-    <strong style="color:var(--text)">Third-Party APIs</strong><br>
-    Queries you make (token addresses, wallet addresses) are forwarded to GeckoTerminal, DexScreener and LiFi to fetch data. Please review their respective privacy policies.<br><br>
-    <strong style="color:var(--text)">Cookies & Analytics</strong><br>
-    We do not use tracking cookies or third-party analytics scripts.<br><br>
-    <strong style="color:var(--text)">Contact</strong><br>
-    For privacy concerns, contact us via the links in the footer.
-    </p>`,
-  terms: `<h2 style="margin-bottom:16px;color:var(--green)">📄 Terms of Use</h2>
-    <p style="color:var(--muted);line-height:1.7;font-size:.88rem">
-    By using Cryptyos you agree to these terms.<br><br>
-    <strong style="color:var(--text)">Permitted Use</strong><br>
-    This platform is provided for personal, non-commercial informational use. You may not scrape, resell or redistribute data obtained through this platform.<br><br>
-    <strong style="color:var(--text)">No Warranties</strong><br>
-    The platform is provided "as is" without warranties of any kind. We do not guarantee uptime, data accuracy or fitness for any particular purpose.<br><br>
-    <strong style="color:var(--text)">Limitation of Liability</strong><br>
-    Cryptyos shall not be liable for any direct, indirect, incidental or consequential damages arising from use of this platform.<br><br>
-    <strong style="color:var(--text)">Changes</strong><br>
-    We reserve the right to modify these terms at any time. Continued use constitutes acceptance of updated terms.<br><br>
-    © 2026 Cryptyos. All rights reserved.
-    </p>`
+const MODALS={
+  disclaimer:`<h2 style="margin-bottom:16px;color:var(--yellow)">⚠️ Disclaimer</h2><p style="color:var(--muted);line-height:1.7;font-size:.86rem">aCrypto is a data aggregation platform for informational purposes only. Nothing here constitutes financial, investment, legal or tax advice.<br><br>Cryptocurrency markets are highly volatile. Conduct your own research and consult a qualified financial advisor before making investment decisions.<br><br>aCrypto does not hold, custody, or transmit digital assets. Swap quotes are provided by LiFi and aCrypto is not responsible for any losses from swap transactions.</p>`,
+  privacy:`<h2 style="margin-bottom:16px;color:var(--accent)">🔒 Privacy Policy</h2><p style="color:var(--muted);line-height:1.7;font-size:.86rem"><strong style="color:var(--text)">Data We Collect</strong><br>aCrypto does not collect, store or sell personal data. No account registration required.<br><br><strong style="color:var(--text)">Third-Party APIs</strong><br>Queries are forwarded to GeckoTerminal, DexScreener and LiFi. Please review their privacy policies.<br><br><strong style="color:var(--text)">Cookies</strong><br>We do not use tracking cookies or analytics scripts.</p>`,
+  terms:`<h2 style="margin-bottom:16px;color:var(--green)">📄 Terms of Use</h2><p style="color:var(--muted);line-height:1.7;font-size:.86rem">By using aCrypto you agree to these terms.<br><br><strong style="color:var(--text)">Permitted Use</strong><br>Personal, non-commercial informational use only. You may not scrape or resell data.<br><br><strong style="color:var(--text)">No Warranties</strong><br>Provided "as is" without warranties of any kind.<br><br>© 2026 aCrypto. All rights reserved.</p>`
 };
+function showModal(k){document.getElementById('modal-content').innerHTML=MODALS[k]||'';document.getElementById('modal-overlay').style.display='flex'}
+function closeModal(){document.getElementById('modal-overlay').style.display='none'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
-function showModal(key) {
-  document.getElementById('modal-content').innerHTML = MODAL_CONTENT[key] || '';
-  const overlay = document.getElementById('modal-overlay');
-  overlay.style.display = 'flex';
-}
-function closeModal() {
-  document.getElementById('modal-overlay').style.display = 'none';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-// ── INIT ───────────────────────────────────────────────────────────────────
-loadTicker();
-setInterval(loadTicker, 60000);
-loadHome();
-setInterval(loadHome, 30000);
-// Pin nav below the A-ADS banner
-(function() {
-  const ad = document.getElementById('aads-top');
-  const nav = document.querySelector('nav');
-  if (!ad || !nav) return;
-  const pin = () => nav.style.top = ad.offsetHeight + 'px';
-  pin();
-  new ResizeObserver(pin).observe(ad);
-})();
+loadTicker();setInterval(loadTicker,60000);
+loadHome();setInterval(loadHome,30000);
 </script>
 </body>
 </html>
