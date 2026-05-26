@@ -211,15 +211,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 28p
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect width="32" height="32" rx="9" fill="url(#lg1)"/>
-      <text x="7" y="23" font-size="18" font-weight="900" font-family="monospace" fill="#fff">a</text>
-      <circle cx="24" cy="10" r="5" fill="none" stroke="#fff" stroke-width="2"/>
-      <line x1="24" y1="6" x2="24" y2="14" stroke="#fff" stroke-width="1.5"/>
-      <line x1="20" y1="10" x2="28" y2="10" stroke="#fff" stroke-width="1.5"/>
-      <defs><linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#4f8eff"/><stop offset="1" stop-color="#7b5fff"/>
-      </linearGradient></defs>
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4f8eff"/><stop offset="1" stop-color="#a259ff"/>
+        </linearGradient>
+      </defs>
+      <!-- Hexagon shape -->
+      <path d="M18 2 L32 10 L32 26 L18 34 L4 26 L4 10 Z" fill="url(#lg1)"/>
+      <!-- Z letter -->
+      <polyline points="11,12 25,12 11,24 25,24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <span class="logo-text">zaCrypto</span>
   </a>
@@ -437,7 +438,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 28p
     <div class="footer-grid">
       <div class="fb">
         <div class="fb-logo">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="9" fill="url(#lg2)"/><text x="7" y="23" font-size="18" font-weight="900" font-family="monospace" fill="#fff">a</text><circle cx="24" cy="10" r="5" fill="none" stroke="#fff" stroke-width="2"/><line x1="24" y1="6" x2="24" y2="14" stroke="#fff" stroke-width="1.5"/><line x1="20" y1="10" x2="28" y2="10" stroke="#fff" stroke-width="1.5"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8eff"/><stop offset="1" stop-color="#7b5fff"/></linearGradient></defs></svg>
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="lg2" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#4f8eff"/><stop offset="1" stop-color="#a259ff"/></linearGradient></defs>
+            <path d="M18 2 L32 10 L32 26 L18 34 L4 26 L4 10 Z" fill="url(#lg2)"/>
+            <polyline points="11,12 25,12 11,24 25,24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span class="logo-text">zaCrypto</span>
         </div>
         <p class="fb-desc">Professional-grade realtime DEX data. Live charts, trades, token analytics, cross-chain swaps and portfolio tracking — free, no API keys.</p>
