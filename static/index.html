@@ -239,6 +239,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 28p
   </div>
 </nav>
 
+<!-- HEADER AD — reloads on every page navigation -->
+<div id="header-ad-wrap" style="background:var(--bg2);border-bottom:1px solid var(--border);text-align:center;padding:4px 0;min-height:52px">
+  <!-- BEGIN AADS AD UNIT 2434924
+  <iframe id="header-ad" data-aa='2434924' src='//acceptable.a-ads.com/2434924/?size=Adaptive'
+    style='border:0;padding:0;width:70%;max-width:900px;height:auto;overflow:hidden;display:inline-block'></iframe>
+  END AADS AD UNIT 2434924 -->
+</div>
+
 <!-- TICKER -->
 <div class="ticker"><div class="ticker-inner" id="ticker">Loading…</div></div>
 
@@ -484,13 +492,30 @@ const API='';
 let chartInstance=null,_autoRefresh=false,_autoTimer=null,_homeTab='gainers';
 const CHAIN_META={ethereum:{name:'Ethereum',emoji:'⟠',id:1},bsc:{name:'BNB Chain',emoji:'🟡',id:56},polygon:{name:'Polygon',emoji:'🟣',id:137},avalanche:{name:'Avalanche',emoji:'🔺',id:43114},fantom:{name:'Fantom',emoji:'👻',id:250},arbitrum:{name:'Arbitrum',emoji:'🔵',id:42161},cronos:{name:'Cronos',emoji:'🐾',id:25},optimism:{name:'Optimism',emoji:'🔴',id:10},base:{name:'Base',emoji:'🔷',id:8453},solana:{name:'Solana',emoji:'◎',id:1399811149}};
 
-function showPage(id,el){
+const PAGE_TITLES={home:'zaCrypto — Live DEX Data',chart:'Chart — zaCrypto',trades:'Trades — zaCrypto',token:'Token Info — zaCrypto',search:'Search — zaCrypto',swap:'Swap — zaCrypto',portfolio:'Portfolio — zaCrypto',chains:'Chains — zaCrypto'};
+
+function showPage(id,el,pushState=true){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   if(el)el.classList.add('active');
   else document.querySelectorAll('.nav-link').forEach(l=>{if((l.getAttribute('onclick')||'').includes("'"+id+"'"))l.classList.add('active')});
   if(id==='chains')renderChains();
+  const hash='#/'+id;
+  if(pushState&&location.hash!==hash)history.pushState({page:id},'',(id==='home'?location.pathname:hash));
+  document.title=PAGE_TITLES[id]||'zaCrypto';
+  // Reload ad iframe on every page change — new referrer path = new ad impression
+  const ad=document.getElementById('header-ad');
+  if(ad){const s=ad.src.split('?')[0];ad.src='';ad.src=s+'?t='+Date.now()+'&ref='+id;}
+}
+
+window.addEventListener('popstate',e=>{
+  const id=(e.state?.page)||(location.hash.replace('#/',''))||'home';
+  showPage(id,null,false);
+});
+function initRoute(){
+  const id=location.hash.replace('#/','').trim()||'home';
+  showPage(id,null,false);
 }
 function fmt(n){if(n==null)return'—';n=parseFloat(n);if(isNaN(n))return'—';if(Math.abs(n)>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(Math.abs(n)>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(Math.abs(n)>=1e3)return'$'+(n/1e3).toFixed(2)+'K';if(Math.abs(n)<0.0001)return'$'+n.toExponential(3);return'$'+n.toFixed(n<1?6:2)}
 function fmtN(n){if(n==null)return'—';n=parseFloat(n);if(isNaN(n))return'—';if(Math.abs(n)>=1e9)return(n/1e9).toFixed(2)+'B';if(Math.abs(n)>=1e6)return(n/1e6).toFixed(2)+'M';if(Math.abs(n)>=1e3)return(n/1e3).toFixed(2)+'K';return n.toFixed(4)}
@@ -673,7 +698,7 @@ function closeModal(){document.getElementById('modal-overlay').style.display='no
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
 loadTicker();setInterval(loadTicker,60000);
-loadHome();setInterval(loadHome,30000);
+initRoute();setInterval(loadHome,30000);
 </script>
 </body>
 </html>
